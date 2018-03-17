@@ -28,7 +28,7 @@
 	 
      <!-- Fonts
      ================================================== -->
-     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+     <link href='<?php $this->url_inicio(); ?> http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
      
     <!-- CSS
      ================================================== -->
@@ -95,14 +95,16 @@
 						
 					<!-- TOP BAR -->
 					<div class="top-bar clearfix">
-						<p class="jmy_web_div" data-page="header" id="slogan" data-editor="no" > <?php $this->pnt('slogan','We have over 15 years of experien',["secundario"=>"header"]); ?>
-						</p>
+						<p class="jmy_web_div" data-page="header" id="slogan" data-editor="no" ><?php 
+						$this->pnt('slogan','We have over 15 years of experien',["secundario"=>"header"]);
+						 ?></p>
 						<ul>
 							<li class="jmy_web_div" data-page="header" id="numero_contacto" data-editor="no" >
-								 <i class="icon-telephone114" >								 	
-								 </i>
-								 <?php $this->pnt('numero_contacto','+1 900 234 567',["secundario"=>"header"]); ?>
-							</li>
+
+
+								
+								 <?php $this->pnt('numero_contacto','<i class="icon-telephone114" > </i>'.'+1 900 234 567',["secundario"=>"header"]); 
+							?></li>
 							<li class="jmy_web_div" data-page="header" id="direc_head" data-editor="no" >
 								<i class="icon-icons74">
 								</i>
