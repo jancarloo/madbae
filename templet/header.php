@@ -28,7 +28,7 @@
 	 
      <!-- Fonts
      ================================================== -->
-     <link href='<?php $this->url_inicio(); ?> http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
      
     <!-- CSS
      ================================================== -->
@@ -98,24 +98,16 @@
 						<p class="jmy_web_div" data-page="header" id="slogan" data-editor="no" ><?php 
 						$this->pnt('slogan','We have over 15 years of experien',["secundario"=>"header"]);
 						 ?></p>
+
 						<ul>
-							<li class="jmy_web_div" data-page="header" id="numero_contacto" data-editor="no" >
-
-
-								
-								 <?php $this->pnt('numero_contacto','<i class="icon-telephone114" > </i>'.'+1 900 234 567',["secundario"=>"header"]); 
+							<li class="jmy_web_div" data-page="header" id="numero_contacto" data-editor="no" ><?php $this->pnt('numero_contacto','<i class="icon-telephone114" > </i>'.'+1 900 234 567',["secundario"=>"header"]); 
 							?></li>
-							<li class="jmy_web_div" data-page="header" id="direc_head" data-editor="no" >
-								<i class="icon-icons74">
-								</i>
-								<?php $this->pnt('direc_head','786 South Park Avenue',["secundario"=>"header"]); ?>
-							</li>
-							<li class="jmy_web_div" data-page="header" id="horari_head" data-editor="no" >
-								<i class="icon-icons20">
-								</i>
-								<?php $this->pnt('horari_head','Mon to Sat 08:00 - 16:30',["secundario"=>"header"]); ?>
-							 </li>
+							<li class="jmy_web_div" data-page="header" id="direc_head" data-editor="no" ><?php $this->pnt('direc_head','<i class="icon-icons74"></i>'.'786 South Park Avenue',["secundario"=>"header"]);
+							 ?></li>
+							<li class="jmy_web_div" data-page="header" id="horari_head" data-editor="no" ><?php $this->pnt('horari_head','<i class="icon-icons20"></i>'.' Mon to Sat 08:00 - 16:30',["secundario"=>"header"]); 
+							?></li>
 						</ul>
+
 					</div>
 					<!-- / TOP BAR -->
 					

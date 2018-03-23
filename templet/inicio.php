@@ -1,14 +1,12 @@
 <!-- MAIN BANNER -->
 <section class="cd-hero">
 	<ul class="cd-hero-slider autoplay">
+
 		<li class="selected">
 			<div class="cd-full-width">
 				<div class="container">
-					<h2 class="jmy_web_div" data-page="inicio" id="slider_1" data-editor="no">
-						<?php $this->pnt('slider_1','Money Doesn’t<br>Come <span class="color-default">Without Care</span>'); ?>
-						</h2>
-					<p class="jmy_web_div" data-page="inicio" id="slider_1_txt" data-editor="no">
-						<?php $this->pnt('slider_1_txt','Finding your next Financial Advisor is as easy as counting from one to five.'); ?></p>
+					<h2 class="jmy_web_div" data-page="inicio" id="slider_1" data-editor="no"><?php $this->pnt('slider_1','Money Doesn’t<br>Come <span class="color-default">Without Care</span>'); ?></h2>					
+					<p class="jmy_web_div" data-page="inicio" id="slider_1_txt"><?php $this->pnt('slider_1_txt','Finding your next Financial Advisor is as easy as counting from one to five.'); ?></p>
 
 					<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-primary" data-text="Leer mas" >Leer mas</a>
 
@@ -72,36 +70,23 @@
 			<span class="cd-marker item-1"></span>
 			
 			<ul>
-				<li class="jmy_web_div selected" data-page="inicio" id="slider_menu_1" data-editor="no"><?php 
 
+				<li class="jmy_web_div selected" data-page="inicio" id="slider_menu_1"><?php 
 				$this->pnt('slider_menu_1','<a href="'.$this->url_inicio(["return"=>true]).'#0">
-						<div class="slide-number">1</div>Money Care<span>Finding your Next Advisor</span>
-					</a>');
-				?></li>
+						<div class="slide-number">1</div>Money Care<span>Finding your Next Advisor</span></a>'); ?></li>
 
-				<li class="jmy_web_div" data-page="inicio" id="slider_menu_2" data-editor="no"><?php
-
-
+				<li class="jmy_web_div" data-page="inicio" id="slider_menu_2"><?php
 				$this->pnt('slider_menu_2','<a href="'.$this->url_inicio(["return"=>true]).'#0">
-						<div class="slide-number">2</div>Friendly Assistance<span>Export Financial Advice</span>
-					</a>'); 
-				?></li>
+						<div class="slide-number">2</div>Friendly Assistance<span>Export Financial Advice</span></a>'); ?></li>
 
-				<li class="jmy_web_div" data-page="inicio" id="slider_menu_3" data-editor="no"><?php
-
-
+				<li class="jmy_web_div" data-page="inicio" id="slider_menu_3"><?php
 				$this->pnt('slider_menu_3','<a href="'.$this->url_inicio(["return"=>true]).'#0">
-						<div class="slide-number">3</div> Our Experience<span>We have 15 Years Experience</span>
-						</a>'); 
-				?></li>
+						<div class="slide-number">3</div> Our Experience<span>We have 15 Years Experience</span></a>'); ?></li>
 
-				<li class="jmy_web_div" data-page="inicio" id="slider_menu_4" data-editor="no"><?php
-
-
+				<li class="jmy_web_div" data-page="inicio" id="slider_menu_4"><?php
 				$this->pnt('slider_menu_4','<a href="'.$this->url_inicio(["return"=>true]).'#0">
-						<div class="slide-number">4</div> Client Investment<span>Doing the right thing</span>
-						</a>'); 
-				?></li>
+						<div class="slide-number">4</div> Client Investment<span>Doing the right thing</span></a>'); ?></li>
+
 			</ul>
 		</nav> 
 	</div>
@@ -115,8 +100,9 @@
 <section class="bg-blue">
 	<div class="container">
 		<div class="row">
+
 			<div class="col-md-6 animate fadeInLeft">
-				<h2 class="jmy_web_div " data-page="inicio" id="welcom_adv" data-editor="no"><?php $this->pnt('welcom_adv','Welcome to Advisor'); ?></h2>
+				<h2 class="jmy_web_div " data-page="inicio" id="welcom_adv"><?php $this->pnt('welcom_adv','Welcome to Advisor'); ?></h2>
 				<div class="height-10"></div>
 				<p class="jmy_web_div " data-page="inicio" id="welcom_adv_txt" data-editor="no"><?php $this->pnt('welcom_adv_txt','We have over 15 years of experience Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean Lorem ipsm dolor sit the power of consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.'); ?></p>
 				<div class="height-10"></div>
@@ -125,6 +111,7 @@
 				<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-bordered-dark" data-text="read more">leer mas</a>
 				<div class="height-40"></div>
 			</div>
+
 			<div class="col-md-6 animate fadeInRight">
 				<div class="video-widget">
 					<img src="images/video-thumb.jpg" class="img-shadow" alt="">
@@ -138,62 +125,82 @@
 
 <!-- BENIFITS -->
  <section class="text-center">
-				<div class="container">
-					<div class="two-items-carousel owl-carousel">
-						<div class="image-and-text-box animate fadeInLeft">
-							<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen"><?php 
-								$this->pnt(	'carr1_imagen','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
-							?></div>
-							<div class="jmy_web_div" data-page="inicio" id="carr1_titulo"><?php 
-							$this->pnt('carr1_titulo','<h3>Why Our Consulting</h3>'); ?></div>
+	<div class="container">
+		<div class="two-items-carousel owl-carousel">
 
-							<div class="jmy_web_div" data-page="inicio" id="carr1_text"><?php 
-							$this->pnt('carr1_text','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p>'); 
-							?></div>
-						</div>						
-						<div class="image-and-text-box animate fadeInRight">
-							<div class="jmy_web_div" data-page="inicio" id="carr1_titulo2"  ><?php 
-							$this->pnt('carr1_titulo2','<h3>Investment Planning</h3>');?></div>
-							<div class="jmy_web_div bordered-thumb" data-page="inicio" id="carr1_text2"><?php 
-							$this->pnt('carr1_text2','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
-							?></div>
-							<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen2"><?php 
-								$this->pnt(	'carr1_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
-							?></div>
-						</div>
-						<div class="image-and-text-box">
-							<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen3"><?php 
-								$this->pnt(	'carr1_imagen3','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
-						?></div>
-							<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo3"  ><?php 
-							$this->pnt('carr1_titulo3','Retirement'); 
-							?></h3>
-							<div class="jmy_web_div" data-page="inicio" id="carr1_text3"><?php 
-							$this->pnt('carr1_text3','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. '); 
-							?></div>
-						</div>
-						<div class="image-and-text-box">
-							<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo4"  ><?php 
-							$this->pnt('carr1_titulo4','Wealth Management'); 
-							?></h3>
-							<div class="jmy_web_div bordered-thumb" data-page="inicio" id="carr1_text2"><?php 
-							$this->pnt('carr1_text2','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
-							?></div>
-							<div class="bordered-thumb"><a href="services.html"><img src="images/img4.jpg" alt=""></a></div>
-						</div>
-						<div class="image-and-text-box">
-							<div class="bordered-thumb"><a href="services.html"><img src="images/img5.jpg" alt=""></a></div>
-							<h3><a href="services.html">Lawyers Consulting</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.</p>
-						</div>
-						<div class="image-and-text-box">
-							<h3><a href="services.html">Online Consulting</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.</p>
-							<div class="bordered-thumb"><a href="services.html"><img src="images/img6.jpg" alt=""></a></div>
-						</div>
-					</div>
-				</div>
-			</section><!-- / BENIFITS -->
+			<div class="image-and-text-box animate fadeInLeft">
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen"><?php 
+					$this->pnt(	'carr1_imagen','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
+				?></div>
+				<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo"><?php 
+				$this->pnt('carr1_titulo','<h3>Why Our Consulting</h3>'); ?></h3>
+
+				<p class="jmy_web_div" data-page="inicio" id="carr1_text"><?php 
+				$this->pnt('carr1_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+				?></p>
+			</div>	
+
+			<div class="image-and-text-box animate fadeInRight">
+				<div class="jmy_web_div" data-page="inicio" id="carr1_titulo2"  ><?php 
+				$this->pnt('carr1_titulo2','<h3>Investment Planning</h3>');?></div>
+				<div class="jmy_web_div bordered-thumb" data-page="inicio" id="carr1_text2"><?php 
+				$this->pnt('carr1_text2','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
+				?></div>
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen2"><?php 
+					$this->pnt(	'carr1_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
+				?></div>
+			</div>
+
+			<div class="image-and-text-box">
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen3"><?php 
+					$this->pnt(	'carr1_imagen3','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
+			?></div>
+				<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo3"  ><?php 
+				$this->pnt('carr1_titulo3','Retirement'); 
+				?></h3>
+				<div class="jmy_web_div" data-page="inicio" id="carr1_text3"><?php 
+				$this->pnt('carr1_text3','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. '); 
+				?></div>
+			</div>
+
+			<div class="image-and-text-box">
+				<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo4"  ><?php 
+				$this->pnt('carr1_titulo4','Wealth Management'); 
+				?></h3>
+				<div class="jmy_web_div " data-page="inicio" id="carr1_text4"><?php 
+				$this->pnt('carr1_text4','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
+				?></div>
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen4"><?php 
+					$this->pnt(	'carr1_imagen4','<img src="'. $this->url_templet(["return"=>true]).'images/img4.jpg" alt="">');
+			?></div>
+			</div>
+
+			<div class="image-and-text-box">
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen5"><?php 
+					$this->pnt(	'carr1_imagen5','<img src="'. $this->url_templet(["return"=>true]).'images/img5.jpg" alt="">');
+				?></div>
+				<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo5"  ><?php 
+				$this->pnt('carr1_titulo5','Lawyers Consulting'); 
+				?></h3>
+				<p class="jmy_web_div " data-page="inicio" id="carr1_text5"><?php 
+				$this->pnt('carr1_text5','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); ?></p>
+			</div>
+
+			<div class="image-and-text-box">
+				<h3 class="jmy_web_div" data-page="inicio" id="carr1_titulo6"  ><?php 
+				$this->pnt('carr1_titulo6','Online Consulting'); 
+				?> </h3>
+				<p class="jmy_web_div " data-page="inicio" id="carr1_text6"><?php 
+				$this->pnt('carr1_text6','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); ?></p>
+
+				<div class="bordered-thumb jmy_web_div" data-page="inicio" id="carr1_imagen6"><?php 
+					$this->pnt(	'carr1_imagen6','<img src="'. $this->url_templet(["return"=>true]).'images/img6.jpg" alt="">');
+				?></div>
+			</div>
+
+		</div>
+	</div>
+</section><!-- / BENIFITS -->
 
 
 <!-- FUNFACTS -->
@@ -201,33 +208,57 @@
 	<div class="funfacts text-center">
 		<div class="advisor-overlay"></div>
 		<div class="funfacts-inner">
-			<h2>Helping Small Businesses</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
+			<h2 class="jmy_web_div" data-page="inicio" id="titulo_satisfaccion"  ><?php 
+				$this->pnt('titulo_satisfaccion','Helping Small Businesses'); 
+				?></h2>
+			<p class="jmy_web_div " data-page="inicio" id="satisfaccion_text"><?php 
+				$this->pnt('satisfaccion_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); ?></p>
+
 			<div class="row text-center" id="counters">
+
 				<div class="col-md-3 col-xs-6">
 					<div class="counter">
-					   <span class="quantity-counter1 highlight">0</span>
-					   <h6 class="counter-details">Employees</h6>
+						<span class="jmy_web_div quantity-counter1 highlight" data-page="inicio" id="satisfaccion_no1"><?php 
+						$this->pnt('satisfaccion_no1','0'); ?></span>	
+
+					   <h6 class="counter-details jmy_web_div" data-page="inicio" id="satisfaccion_consepto1"  ><?php 
+						$this->pnt('satisfaccion_consepto1','Employees'); 
+						?></h6>
 					 </div>
 				</div>
+
 				<div class="col-md-3 col-xs-6">
 					<div class="counter">
-					   <span class="quantity-counter2 highlight">0</span>
-					   <h6 class="counter-details">Location</h6>
+					   <span class="jmy_web_div quantity-counter2 highlight" data-page="inicio" id="satisfaccion_no2"><?php 
+						$this->pnt('satisfaccion_no2','0'); ?></span>
+
+					   <h6 class="counter-details jmy_web_div" data-page="inicio" id="satisfaccion_consepto2"  ><?php 
+						$this->pnt('satisfaccion_consepto2','Location'); 
+						?></h6>
 					 </div>
 				</div>
+
 				<div class="col-md-3 col-xs-6">
 					<div class="counter">
-					   <span class="quantity-counter3 highlight">0</span>
-					   <h6 class="counter-details">% Satisfaction</h6>
+					   <span class="jmy_web_div quantity-counte3 highlight" data-page="inicio" id="satisfaccion_no3"><?php 
+						$this->pnt('satisfaccion_no3','0'); ?></span>
+
+					   <h6 class="counter-details jmy_web_div" data-page="inicio" id="satisfaccion_consepto3"  ><?php 
+						$this->pnt('satisfaccion_consepto3','<% Satisfaction'); 
+						?></h6>
 					 </div>
 				</div>
+
 				<div class="col-md-3 col-xs-6">
 					<div class="counter">
-					   <span class="quantity-counter4 highlight">0</span>
-					   <h6 class="counter-details">Happy Customers</h6>
+					   <span class="jmy_web_div quantity-counter4 highlight" data-page="inicio" id="satisfaccion_no4"><?php 
+						$this->pnt('satisfaccion_no4','0'); ?></span>
+					   <h6 class="counter-details jmy_web_div" data-page="inicio" id="satisfaccion_consepto4"  ><?php 
+						$this->pnt('satisfaccion_consepto4','Happy Customers'); 
+						?></h6>
 					 </div>
 				</div>
+
 			</div>
 		</div>
 	</div><!-- / CONTAINER -->
@@ -239,8 +270,12 @@
 <section class="different-services text-center parallax">
 	<div class="container">
 		<div class="heading animate bounceIn">
-			<h1 class="color-white">We Love What We Do</h1>
-			<p class="color-white">Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
+			<h1 class="color-white jmy_web_div" data-page="inicio" id="amamos_titulo"  ><?php 
+				$this->pnt('amamos_titulo','We Love What We Do'); 
+				?></h1>
+			<p class="color-white jmy_web_div" data-page="inicio" id="amamos_texto"  ><?php 
+				$this->pnt('amamos_texto','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+				?></p>
 		</div>
 	</div>
 </section><!-- / DIFFERENT SERVICES -->
@@ -252,73 +287,126 @@
 	<div class="container">
 		<div class="services text-center">
 			<div class="three-items-carousel owl-carousel">
+
 				<div class="service-box">
 					<i class="icon-img-1"></i>
-					<h4>Advisor</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide1_titulo"><?php 
+					$this->pnt('amamos_slide1_titulo','Advisor'); 
+					?></h4>
+
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide1_text"><?php 
+					$this->pnt('amamos_slide1_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
+
 				<div class="service-box">
 					<i class="icon-img-6"></i>
-					<h4>Business Consulting</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide2_titulo"><?php 
+					$this->pnt('amamos_slide2_titulo','Business Consulting'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide2_text"  ><?php 
+					$this->pnt('amamos_slide2_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
+
 				<div class="service-box">
 					<i class="icon-img-7"></i>
-					<h4>Travel and Aviation</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide3_titulo"><?php 
+					$this->pnt('amamos_slide3_titulo','Travel and Aviation'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide3_text"><?php 
+					$this->pnt('amamos_slide3_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
 				
 				<div class="service-box animate fadeInUp">
 					<i class="icon-img-8"></i>
-					<h4>Consumer Consulting</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide4_titulo"><?php 
+					$this->pnt('amamos_slide4_titulo','Consumer Consulting'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide4_text"><?php 
+					$this->pnt('amamos_slide4_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
+
 				<div class="service-box animate fadeInUp" data-delay="100">
 					<i class="icon-img-2"></i>
-					<h4>Save Money</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide5_titulo"><?php 
+					$this->pnt('amamos_slide5_titulo','Save Money'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide5_text"><?php 
+					$this->pnt('amamos_slide5_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
+
 				<div class="service-box animate fadeInUp" data-delay="200">
 					<i class="icon-img-3"></i>
-					<h4>Secure Future</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide6_titulo"><?php 
+					$this->pnt('amamos_slide6_titulo','Secure Future'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide6_text"><?php 
+					$this->pnt('amamos_slide6_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
+
 				<div class="service-box">
 					<i class="icon-img-4"></i>
-					<h4>Private Consulting</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide7_titulo"><?php 
+					$this->pnt('amamos_slide7_titulo','Private Consulting'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide7_text" ><?php 
+					$this->pnt('amamos_slide7_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
 				<div class="service-box">
 					<i class="icon-img-5"></i>
-					<h4>Financial Planning</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide8_titulo"><?php 
+					$this->pnt('amamos_slide8_titulo','Financial Planning'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide8_text"><?php 
+					$this->pnt('amamos_slide8_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
 				
 				<div class="service-box">
 					<i class="icon-img-9"></i>
-					<h4>Online Consulting</h4>
-					<p>Lorem ipsum dolor sit amet, Let it it floats back to you.</p>
+					<h4 class="jmy_web_div" data-page="inicio" id="amamos_slide9_titulo"><?php 
+					$this->pnt('amamos_slide9_titulo','Online Consulting'); 
+					?></h4>
+					<p class="jmy_web_div" data-page="inicio" id="amamos_slide9_text"><?php 
+					$this->pnt('amamos_slide9_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 animate fadeInLeft">
 				<ul class="image-list-classic ">
-					<li><img src="images/who-is-behind-img1.jpg" alt=""></li>
-					<li><img src="images/who-is-behind-img2.jpg" alt=""></li>
+					<li class="jmy_web_div" data-page="inicio" id="brok_imagen"><?php 
+					$this->pnt(	'bro_imagen','<img src="'.$this->url_templet(["return"=>true]).'images/behind.jpg" alt="hola">'); 
+					?></li>
+
+					<li class="jmy_web_div" data-page="inicio" id="bro_imagen2"><?php 
+					$this->pnt(	'brok_imagen2','<img src="'.$this->url_templet(["return"=>true]).'images/behind2.jpg" alt="hola">'); 
+					?></li>
 				</ul>
 			</div>
 			<div class="col-md-6 animate fadeInRight">
-				<h3>Who is behind the best brok</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. </p>
+				<h3 class="jmy_web_div" data-page="inicio" id="brok_titulo"><?php 
+					$this->pnt('brok_titulo','Who is behind the best brok'); 
+					?></h3>
+				<p class="jmy_web_div" data-page="inicio" id="brok_texto"><?php 
+					$this->pnt('brok_texto','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+					?></p>
 				
 				
 				<div id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="toggle">
 						<div class="toggle-heading" role="tab">
 							<a role="button" data-toggle="collapse" data-parent="#accordion" href="<?php $this->url_templet(); ?>#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							  <i class="fa fa-plus"></i> What is do i have to tell you a few lorem?
-							</a>
+							  <i class="fa fa-plus"></i> <p class="jmy_web_div" data-page="inicio" id="brok_texto"><?php 
+							$this->pnt('brok_texto','What is do i have to tell you a few lorem?'); 
+							?></p></a>
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse" role="tabpanel">
 							<div class="toggle-body">
