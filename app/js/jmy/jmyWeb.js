@@ -264,7 +264,8 @@ var style = {
 
     function web_slider(d=[]){	  	
     	var va=JSON.stringify(d.var);
-      	$("#"+d.id).append("<div style='z-index:10000;position:absolute;top:5px;left:5px;' id='"+d.id+"_DI'><img id='"+d.id+"_OP' src='http://social.comsis.mx/templet/images/logo.png' data-var='"+va+"' data-page='"+d.page+"' data-tabla='"+d.tabla+"' heigth='60'></div>");    
+    	var pos = (d.button=='down') ? 'bottom:5px;left:5px;':'top:5px;left:5px;';
+      	$("#"+d.id).append("<div style='z-index:10000;position:absolute;"+pos+"' id='"+d.id+"_DI'><img style='width: 66px;height: auto;' id='"+d.id+"_OP' src='http://social.comsis.mx/templet/images/logo.png' data-var='"+va+"' data-page='"+d.page+"' data-tabla='"+d.tabla+"' heigth='60'></div>");    
       	
       	$("#"+d.id+"_OP").click(function(){
       		$(".webSliderOP").remove();
@@ -372,25 +373,32 @@ var style = {
 	}
 
 	function uForm(formData,d=[]){
+		d.tabla=(d.tabla=="undefined")?"":d.tabla;
 		$.ajax({
-			url: "jmyWebUpLoIm",
+			url: "/jmyWebUpLoIm",
 			type: "POST",
 			data: formData,
 			contentType:false,
     		dataType: 'json',
 			cache: false,
 			processData: false,
-			success: function(r){			
-				var h = '<img width="45%" src="'+r.url+'">';
+			success: function(r){
+				console.log(r);			
+				r.url =(r.url!=undefined)?r.url:r.val;
+				var h = '<img width="45%" src="../'+r.url+'">';
 				$('#drop-area').html(h);
-				$("#"+d.id).attr("src",r.url);
+				console.log(d);
+				$("#"+d.id).attr("src",'../'+r.url);
 				addGuardarSlider({	id:d.id,
 									id_target:d.id,
       								tabla:d.tabla,
       								page:d.page,
-      								val:r.url,
+      								val:'../'+r.url,
       							});
-		}});
+		},error: function(result) {
+			console.log(result);
+                }
+            });
 	}
 
 	function cargaSlider(d = []) {
@@ -401,7 +409,8 @@ var style = {
 	            page: $(this).data("page"),
 	            tabla: $(this).data("tabla"),
 	            var: $(this).data("var"),
-	            marco: $(this).data("marco")
+	            marco: $(this).data("marco"),
+	            button: $(this).data("button")
 	        });
 		});
 	}
