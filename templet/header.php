@@ -28,7 +28,7 @@
 	 
      <!-- Fonts
      ================================================== -->
-     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
      
     <!-- CSS
      ================================================== -->
@@ -95,8 +95,8 @@
 						
 					<!-- TOP BAR -->
 					<div class="top-bar clearfix">
-						<p class="jmy_web_div" data-page="header" id="slogan" data-editor="no" ><?php 
-						$this->pnt('slogan','We have over 15 years of experien',["secundario"=>"header"]);
+						<p class="jmy_web_div"  id="slogan" data-editor="no" data-page="header"><?php 
+						$this->pnt('slogan','We have over 15 years of experien +1 900',["secundario"=>"header"]);
 						 ?></p>
 
 						<ul>
