@@ -158,9 +158,9 @@
 						$this->pnt('planing_carr'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
 						?></p>
 					</div>	
-				</div>
+				
 				<!-- FINALIZA el Ejemplo 1 -->
-
+prueba del .com
 
 
 				<div class="image-and-text-box animate fadeInR,
@@ -174,13 +174,13 @@
 					<div class="bordered-thumb " data-page="inicio" id="planing_carr<?php echo $i; ?>_imagen"><?php 
 						$this->pnt(	'planing_carr'.$i.'_imagen','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
 					?></div>
-				</div>
+		
 
-			
+			</div>
 
 
    <?php } ?>
-
+</div>
 
 
 
