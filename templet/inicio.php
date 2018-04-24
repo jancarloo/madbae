@@ -127,60 +127,71 @@
  <section class="text-center">
 	<div class="container">
 
-<div class="jmy_web_contador" data-page="inicio" id="numero_de_carrusel2" data-value="<?php
-        $this->pnt('numero_de_carrusel2','3'); 
+<!--
+<div class="jmy_web_categorias" data-page="inicio" id="categorias_nombres" data-value="<?php
+            $categorias = ["anillos","collares","pulceras"];
+            $categorias = $this->pnt('categorias_nombres',implode(',', $categorias),['return'=>true]); 
+            echo $categorias;
+            $categorias = explode(",",$categorias);
+            ?>" data-titulo="Indica el nombre de categoría separado por comas"></div>
+
+    -->
+
+
+<div class="jmy_web_contador" data-page="inicio" id="numero_de_carrusel" data-value="<?php
+        $this->pnt('numero_de_carrusel','3'); 
         ?>" data-titulo="Inica el número de páginas a mostrar"></div>
+
+
 
 
 		<div class="two-items-carousel owl-carousel">
 
 
            <?php 
-                $paginas = $this->pnt('numero_de_carrusel2','3',["return"=>true]); 
+                 $paginas = $this->pnt('numero_de_carrusel','3',["return"=>true]); 
                 $contador = 0;
                 for($i=0;$i<$paginas;$i++){ ?>
 
                 <!-- INICIA el Ejemplo 1 -->
-                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider1_<?php echo $i;?>" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"planing_carr<?php echo $i;?>_imagen","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"planing_carr<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"planing_carr<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"carr<?php echo $i;?>_imagen","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"carr<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"carr<?php echo $i;?>_text","placeholder":"parrafo"}]'>
 
 
 					<div class="image-and-text-box animate fadeInLeft">
-						<div class="bordered-thumb" data-page="inicio">
+						<div class="bordered-thumb " data-page="inicio">
 
-							<img id="planing_carr<?php echo $i; ?>_imagen" src="<?php 
-							$this->pnt(	'planing_carr'.$i.'_imagen',
+							<img id="carr<?php echo $i; ?>_imagen" src="<?php 
+							$this->pnt(	'carr'.$i.'_imagen',
 									$this->url_templet(["return"=>true]).'images/img1.jpg'
 									); ?>" alt=""></div>
-						<h3 class="" data-page="inicio" id="planing_carr<?php echo $i; ?>_titulo"><?php 
-						$this->pnt('planing_carr'.$i.'_titulo','Why Our Consulting'); ?></h3>
+						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo"><?php 
+						$this->pnt('carr'.$i.'_titulo','Why Our Consulting'); ?></h3>
 
-						<p class="" data-page="inicio" id="planing_carr<?php echo $i; ?>_text"><?php 
-						$this->pnt('planing_carr'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text"><?php 
+						$this->pnt('carr'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
 						?></p>
 					</div>	
-				
+				</div>
 				<!-- FINALIZA el Ejemplo 1 -->
 
 
 
-				<div class="image-and-text-box animate fadeInR,
-					<div class="" data-page="inicio" id="2planing_carr<?php echo $i; ?>_titulo"  ><?php 
-					$this->pnt('2planing_carr'.$i.'_titulo','<h3>Investment Planning</h3>');?></div>
-
-					<div class="bordered-thumb" data-page="inicio" id="2planing_carr<?php echo $i; ?>_text"><?php 
-					$this->pnt('2planing_carr'.$i.'_text','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
-					?></div>
-
-					<div class="bordered-thumb " data-page="inicio" id="2planing_carr<?php echo $i; ?>_imagen"><?php 
-						$this->pnt(	'2planing_carr'.$i.'_imagen','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
-					?></div>
-		
-
+			<div class="image-and-text-box animate fadeInRight">
+				<div class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo2"  ><?php 
+				$this->pnt('carr'.$i.'_titulo2','<h3>Investment Planning</h3>');?></div>
+				<div class="bordered-thumb" data-page="inicio" id="carr<?php echo $i; ?>_text2"><?php 
+				$this->pnt('carr'.$i.'_text2','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
+				?></div>
+				<div class="bordered-thumb " data-page="inicio" id="carr<?php echo $i; ?>_imagen2"><?php 
+					$this->pnt(	'carr'.$i.'_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
+				?></div>
 			</div>
+
+			
 
 
    <?php } ?>
-</div>
+
 
 
 
@@ -870,9 +881,13 @@
 			</div>
 			<div class="request-a-callback-form">
 				<form>
+
 					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Your Name" required>
+
 					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email Address" required>
+
 					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Phone Number" >
+
 					<div class="styled-select">
 						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
 							<option>I would like to discuss:</option>
@@ -882,7 +897,9 @@
 							<option>Other</option>
 						</select>
 					</div>
-					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio">Submit</button>
+
+					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Submit</button>
+
 				</form>
 			</div>
 		</div>
