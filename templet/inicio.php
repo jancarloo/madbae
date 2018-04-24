@@ -174,7 +174,32 @@
 				</div>
 				<!-- FINALIZA el Ejemplo 1 -->
 
+  <!-- INICIA el Ejemplo 1 -->
+                <div class="<?php $this->pnt('slider_cat_'.$i,'_b'); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>_b" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"carr<?php echo $i;?>_imagen_b","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"carr<?php echo $i;?>_titulo_b","placeholder":"TituloH3"},{"type":"text","id":"carr<?php echo $i;?>_text_b","placeholder":"parrafo"}]'>
 
+
+					<div class="image-and-text-box animate fadeInLeft">
+						
+						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo_b"><?php 
+						$this->pnt('carr'.$i.'_titulo_b','Why Our Consulting'); ?></h3>
+
+						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text_b"><?php 
+						$this->pnt('carr'.$i.'_text_b','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						?></p>
+						<div class="bordered-thumb " data-page="inicio">
+
+							<img id="carr<?php echo $i; ?>_imagen_b" src="<?php 
+							$this->pnt(	'carr'.$i.'_imagen_b',
+									$this->url_templet(["return"=>true]).'images/img1.jpg'
+									); ?>" alt=""></div>
+					</div>	
+				</div>
+				<!-- FINALIZA el Ejemplo 1 -->
+
+			
+
+
+   <?php /* 
 
 			<div class="image-and-text-box animate fadeInRight">
 				<div class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo2"  ><?php 
@@ -185,12 +210,7 @@
 				<div class="bordered-thumb " data-page="inicio" id="carr<?php echo $i; ?>_imagen2"><?php 
 					$this->pnt(	'carr'.$i.'_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
 				?></div>
-			</div>
-
-			
-
-
-   <?php } ?>
+			</div> */ } ?>
 
 
 
