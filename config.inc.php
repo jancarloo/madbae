@@ -39,6 +39,19 @@ define(	"DB_PA","01568466700"); //contrase�a
 define(	"DB_DB","madbae"); //Base de datos
 
 
+/* Definiciones de correo */
+
+define( "MAIL_DEBUG",2 );
+define( "MAIL_HOST","comsis.online" );
+define( "MAIL_PORT",465 );
+define( "MAIL_SMTPAUTH",false );
+define( "MAIL_USER","test@comsis.online" );
+define( "MAIL_PASS","pruebasdetodo" );
+
+define( "MAIL_SETFROM_EMAIL","test@comsis.online" );
+define( "MAIL_SETFROM_NAME","Prueba de correo" );
+
+
 define(	"DB_PX",""); //prefijo de tablas en Base de datos //ACT
 
 define("PAGE_HEADER","header"); // ACT

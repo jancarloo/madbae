@@ -11,7 +11,7 @@
 					<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-primary" data-text="Leer mas" >Leer mas</a>
 
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos" >Contactanos</a>
-				</div>
+				</div>	
 			</div>
 		</li>
 
@@ -877,11 +877,11 @@
 			</div>
 			<div class="request-a-callback-form">
 				<form>
-					<input type="text" placeholder="Your Name">
-					<input type="text" placeholder="Email Address">
-					<input type="text" placeholder="Phone Number">
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Your Name" required>
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email Address" required>
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Phone Number" >
 					<div class="styled-select">
-						<select>
+						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
 							<option>I would like to discuss:</option>
 							<option>Personal Finance</option>
 							<option>Stock trading</option>
@@ -889,7 +889,7 @@
 							<option>Other</option>
 						</select>
 					</div>
-					<button data-text="submit" class="btn btn-primary">Submit</button>
+					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio">Submit</button>
 				</form>
 			</div>
 		</div>
