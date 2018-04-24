@@ -19,12 +19,12 @@
 			<div class="cd-full-width">
 				<div class="container">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_2" data-editor="no">
-						<?php $this->pnt('slider_2','Friendly <span class="color-default">Assistance</span>'); ?>
-					</h2>
+						<?php $this->pnt('slider_2','Friendly <span class="color-default">Assistance</span>'); 
+						?></h2>
 
 					<p class="jmy_web_div" data-page="inicio" id="slider_2_txt" data-editor="no"> 
-						<?php $this->pnt('slider_2_txt','With over 15 years of experience we’ll ensure you always get the best<br>guidance. we’re with you every step of the way'); ?>	
-					</p>
+						<?php $this->pnt('slider_2_txt','With over 15 years of experience we’ll ensure you always get the best<br>guidance. we’re with you every step of the way');
+						?></p>
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="póngase en contacto con nosotros hoy">póngase en contacto con nosotros hoy
 					</a>
 				</div>
@@ -37,9 +37,9 @@
 					<h2 class="jmy_web_div color-white" data-page="inicio" id="slider_3" data-editor="no">
 						<?php $this->pnt('slider_3','Experience is Everything'); ?>
 					</h2>
-					<p class="jmy_web_div color-white"  data-page="inicio" id="slider_3_txt" data-editor="no">
-						<?php $this->pnt('slider_3_txt','With over 15 years of experience we’ll ensure you always get the best<br>guidance we’re with you every step of the way'); ?>						
-					</p>
+					<p class="jmy_web_div color-white"  data-page="inicio" id="slider_3_txt" data-editor="no"><?php
+					 $this->pnt('slider_3_txt','With over 15 years of experience we’ll ensure you always get the best<br>guidance we’re with you every step of the way'); 
+					 ?></p>
 					<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-primary" data-text="leer mas">leer mas</a>
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos">Contactanos</a>
 				</div>
@@ -108,7 +108,7 @@
 				<div class="height-10"></div>
 				<p class="jmy_web_div " data-page="inicio" id="2welcom_adv" data-editor="no"><?php $this->pnt('2welcom_adv','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum nec risus et suscipit Curabitur metus ipsum.'); ?></p>
 				<div class="height-20"></div>
-				<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-bordered-dark" data-text="read more">leer mas</a>
+				<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-bordered-dark" data-text="leer mas">leer mas</a>
 				<div class="height-40"></div>
 			</div>
 
@@ -127,71 +127,60 @@
  <section class="text-center">
 	<div class="container">
 
-<!--
-<div class="jmy_web_categorias" data-page="inicio" id="categorias_nombres" data-value="<?php
-            $categorias = ["anillos","collares","pulceras"];
-            $categorias = $this->pnt('categorias_nombres',implode(',', $categorias),['return'=>true]); 
-            echo $categorias;
-            $categorias = explode(",",$categorias);
-            ?>" data-titulo="Indica el nombre de categoría separado por comas"></div>
-
-    -->
-
-
-<div class="jmy_web_contador" data-page="inicio" id="numero_de_carrusel" data-value="<?php
-        $this->pnt('numero_de_carrusel','3'); 
+<div class="jmy_web_contador" data-page="inicio" id="numero_de_carrusel2" data-value="<?php
+        $this->pnt('numero_de_carrusel2','3'); 
         ?>" data-titulo="Inica el número de páginas a mostrar"></div>
-
-
 
 
 		<div class="two-items-carousel owl-carousel">
 
 
            <?php 
-                 $paginas = $this->pnt('numero_de_carrusel','3',["return"=>true]); 
+                $paginas = $this->pnt('numero_de_carrusel2','3',["return"=>true]); 
                 $contador = 0;
                 for($i=0;$i<$paginas;$i++){ ?>
 
                 <!-- INICIA el Ejemplo 1 -->
-                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"carr<?php echo $i;?>_imagen","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"carr<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"carr<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider1_<?php echo $i;?>" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"planing_carr<?php echo $i;?>_imagen","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"planing_carr<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"planing_carr<?php echo $i;?>_text","placeholder":"parrafo"}]'>
 
 
 					<div class="image-and-text-box animate fadeInLeft">
-						<div class="bordered-thumb " data-page="inicio">
+						<div class="bordered-thumb" data-page="inicio">
 
-							<img id="carr<?php echo $i; ?>_imagen" src="<?php 
-							$this->pnt(	'carr'.$i.'_imagen',
+							<img id="planing_carr<?php echo $i; ?>_imagen" src="<?php 
+							$this->pnt(	'planing_carr'.$i.'_imagen',
 									$this->url_templet(["return"=>true]).'images/img1.jpg'
 									); ?>" alt=""></div>
-						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo"><?php 
-						$this->pnt('carr'.$i.'_titulo','Why Our Consulting'); ?></h3>
+						<h3 class="" data-page="inicio" id="planing_carr<?php echo $i; ?>_titulo"><?php 
+						$this->pnt('planing_carr'.$i.'_titulo','Why Our Consulting'); ?></h3>
 
-						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text"><?php 
-						$this->pnt('carr'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						<p class="" data-page="inicio" id="planing_carr<?php echo $i; ?>_text"><?php 
+						$this->pnt('planing_carr'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
 						?></p>
 					</div>	
-				</div>
+				
 				<!-- FINALIZA el Ejemplo 1 -->
 
 
 
-			<div class="image-and-text-box animate fadeInRight">
-				<div class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo2"  ><?php 
-				$this->pnt('carr'.$i.'_titulo2','<h3>Investment Planning</h3>');?></div>
-				<div class="bordered-thumb" data-page="inicio" id="carr<?php echo $i; ?>_text2"><?php 
-				$this->pnt('carr'.$i.'_text2','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
-				?></div>
-				<div class="bordered-thumb " data-page="inicio" id="carr<?php echo $i; ?>_imagen2"><?php 
-					$this->pnt(	'carr'.$i.'_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
-				?></div>
-			</div>
+				<div class="image-and-text-box animate fadeInR,
+					<div class="" data-page="inicio" id="2planing_carr<?php echo $i; ?>_titulo"  ><?php 
+					$this->pnt('2planing_carr'.$i.'_titulo','<h3>Investment Planning</h3>');?></div>
 
-			
+					<div class="bordered-thumb" data-page="inicio" id="2planing_carr<?php echo $i; ?>_text"><?php 
+					$this->pnt('2planing_carr'.$i.'_text','<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. </p> '); 
+					?></div>
+
+					<div class="bordered-thumb " data-page="inicio" id="2planing_carr<?php echo $i; ?>_imagen"><?php 
+						$this->pnt(	'2planing_carr'.$i.'_imagen','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
+					?></div>
+		
+
+			</div>
 
 
    <?php } ?>
-
+</div>
 
 
 
@@ -241,7 +230,7 @@
 						$this->pnt('satisfaccion_no3','0'); ?></span>
 
 					   <h6 class="counter-details jmy_web_div" data-page="inicio" id="satisfaccion_consepto3"  ><?php 
-						$this->pnt('satisfaccion_consepto3','<% Satisfaction'); 
+						$this->pnt('satisfaccion_consepto3',' Satisfaction'); 
 						?></h6>
 					 </div>
 				</div>
@@ -327,9 +316,9 @@
 					  </div>
 					</li>
 
-					<li><div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2" data-button="down" data-var='[{"type":"imagen","id":"bro_imagen2","url":"<?php $this->url_templet(); ?>images/behind.jpg"}]' >
+					<li><div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2" data-button="down" data-var='[{"type":"imagen","id":"bro_imagen2","url":"<?php $this->url_templet(); ?>images/behind2.jpg"}]' >
 
-					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen2" src="<?php $this->pnt('bro_imagen2',$this->url_templet(['return'=>true]).'images/behind.jpg'); ?>"/>
+					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen2" src="<?php $this->pnt('bro_imagen2',$this->url_templet(['return'=>true]).'images/behind2.jpg'); ?>"/>
 					  </div></li>
 				</ul>
 			</div>
@@ -339,20 +328,20 @@
 					?></h3>
 				<p class="jmy_web_div" data-page="inicio" id="brok_texto"><?php 
 					$this->pnt('brok_texto','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
-					?></p>
+				?></p>
 				
 				
 
 			<div class="jmy_web_contador" data-page="inicio" id="brok_numero_de_carrusel" data-value="<?php
-        $this->pnt('brok_numero_de_carrusel','3'); 
-        ?>" data-titulo="Inica el número de páginas a mostrar"></div>
+			        $this->pnt('brok_numero_de_carrusel','3'); 
+			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>
 
 
 				<div id="accordion" role="tablist" aria-multiselectable="true">
 
-<?php 
-                 $paginas = $this->pnt('brok_numero_de_carrusel','3',["return"=>true]); 
-                $contador = 0;
+					<?php 
+            	     $paginas = $this->pnt('brok_numero_de_carrusel','3',["return"=>true]); 
+              		 $contador = 0;
                 for($i=0;$i<$paginas;$i++){ ?>
 
 
@@ -372,7 +361,7 @@
 						</div>
 					</div>
 
-<?php } ?>
+					<?php } ?>
 
 
 
@@ -389,11 +378,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<h4 class=" animate fadeInLeft">If you have any querry for related investment... We are available</h4>
+				<h4 class="jmy_web_div animate fadeInLeft" data-page="inicio" id="deseo_duda_asesores_text"><?php 
+					$this->pnt('deseo_duda_asesores_text','Si tiene algún deseo o alguna pregunta ... Estamos disponibles'); 
+					?></h4>
 			</div>
 			<div class="col-md-3">
 				<div class="text-right">
-					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-primary get-in-touch animate fadeInRight" data-text="Contact us"><i class="icon-telephone114"></i>Contact us</a>
+					<a href="<?php $this->url_inicio(); ?>" class="btn btn-primary get-in-touch animate fadeInRight" data-text="Contactanos "><i class="icon-telephone114"></i>Contactanos</a>
 				</div>
 			</div>
 		</div>
@@ -405,18 +396,48 @@
 <section class="meet-our-advisors">
 	<div class="container">
 		<div class="heading text-center animate bounceIn">
-			<h2>Meet Our Advisors</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
+			<h2 class="jmy_web_div" data-page="inicio" id="nuestros_asesores_titulo"><?php 
+					$this->pnt('nuestros_asesores_titulo','Conoce a nuestros asesores'); 
+					?></h2>
+			 <p class="jmy_web_div" data-page="inicio" id="nuestros_asesores_txt"  ><?php 
+				$this->pnt('nuestros_asesores_txt','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
+				?></p>
 		</div>
+
+		<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_nuestros_asesores_" data-value="<?php
+			        $this->pnt('numero_carrusel_nuestros_asesores_','3'); 
+			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>
 		
 		<div class="single-item-carousel owl-carousel classic-arrows">
+			
+			<?php 
+            	     $paginas = $this->pnt('numero_carrusel_nuestros_asesores_','3',["return"=>true]); 
+              		 $contador = 0;
+                for($i=0;$i<$paginas;$i++){ ?>
+
+
 			<div class="row">
-				<div class="col-md-5 animate fadeInLeft"><img src="images/meet-our-advisors-img1.jpg" alt=""></div>
-				<div class="col-md-7 animate fadeInRight">
+
+				<div class="col-md-1" >
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div> 
+				<div class="col-md-5 animate fadeInLeft <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+
+					<img id="nuestros_asesores_i<?php echo $i; ?>_imagen" src="<?php $this->pnt('nuestros_asesores_i'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/meet-our-advisors-img1.jpg'); ?>"/></div>
+
+				<div class="col-md-6 animate fadeInRight">
 					<div class="meet-advisors-content">
-						<h3>David Fernando<span>Founder & CEO</span></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. Lorem ipsum dolor sit amet. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
+						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_nombre_asesor"><?php 
+						$this->pnt('carr'.$i.'_nombre_asesor','David Fernando<span><br>Founder & CEO</span>'); ?></h3>
+
+						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text_asesor"><?php 
+						$this->pnt('carr'.$i.'_text_asesor','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						?></p>
+
+						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text_asesor2"><?php 
+						$this->pnt('carr'.$i.'_text_asesor2','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						?></p>
+
 						<ul class="social-text">
 							<li><a href="<?php $this->url_inicio(); ?>#." class="facebook">facebook</a></li>
 							<li><a href="<?php $this->url_inicio(); ?>#." class="twitter">twitter</a></li>
@@ -425,36 +446,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-5"><img src="images/meet-our-advisors-img2.jpg" alt=""></div>
-				<div class="col-md-7">
-					<div class="meet-advisors-content">
-						<h3>Ashley Hardy<span>Chief Marketing Officer</span></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. Lorem ipsum dolor sit amet. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
-						<ul class="social-text">
-							<li><a href="<?php $this->url_inicio(); ?>#." class="facebook">facebook</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="twitter">twitter</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="youtube">youtube</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5"><img src="images/meet-our-advisors-img3.jpg" alt=""></div>
-				<div class="col-md-7">
-					<div class="meet-advisors-content">
-						<h3>Fernando Torres<span>Administrator</span></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you. Lorem ipsum dolor sit amet. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
-						<ul class="social-text">
-							<li><a href="<?php $this->url_inicio(); ?>#." class="facebook">facebook</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="twitter">twitter</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="youtube">youtube</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+
+			<?php } ?>
 		</div>
 	</div>
 </section><!-- / MEET OUR ADVISORS -->
