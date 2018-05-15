@@ -123,21 +123,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						
-						<div class="search-btn">
-							<a href="<?php $this->url_templet(); ?>javascript:void(0);" class="search-trigger"><i class="icon-icons185"></i></a>
-						</div>
 						
-						<div class="search-container">
-							<i class="fa fa-times header-search-close"></i>
-							<div class="search-overlay"></div>
-							<div class="search">
-								<form>
-									<label>Buscar:</label>
-									<input type="text" placeholder="">
-									<button><i class="fa fa-search"></i></button>
-								</form>
-							</div>
-						</div>
 						
 						<nav class="main-nav navbar-collapse collapse" id="primary-nav">
 							<ul class="nav nav-pills">

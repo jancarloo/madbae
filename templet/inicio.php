@@ -231,7 +231,7 @@
 			<p class="jmy_web_div " data-page="inicio" id="satisfaccion_text"><?php 
 				$this->pnt('satisfaccion_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); ?></p>
 
-			<div class="row text-center" id="counters">
+			<div class="row text-center" id="">
 
 				<div class="col-md-3 col-xs-6">
 					<div class="counter">
@@ -310,14 +310,16 @@
 
 
 
-
 			<div class="three-items-carousel owl-carousel">
 
  			<?php 
                  $paginas = $this->pnt('amamos_numero_de_carrusel','3',["return"=>true]); 
                 $contador = 0;
                 for($i=0;$i<$paginas;$i++){ ?>
+
                   <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider_2_<?php echo $i;?>" data-page="inicio" data-marco="service-box" data-var='[{"type":"text","id":"amamos_slide<?php echo $i;?>_icono","placeholder":"icon-img-#(#1-#10)"},{"type":"text","id":"amamos_slide<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"amamos_slide<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+
+
 					<div class="service-box">
 						<i class="<?php 
 						$this->pnt('amamos_slide'.$i.'_icono','icon-img-'.($i+1)); 
@@ -330,6 +332,8 @@
 						$this->pnt('amamos_slide'.$i.'_text','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
 						?></p>
 					</div>
+
+
 				</div>
 
 				<?php } ?>
