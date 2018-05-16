@@ -444,36 +444,33 @@
 			<?php 
             	     $paginas = $this->pnt('numero_carrusel_nuestros_asesores_','3',["return"=>true]); 
               		 $contador = 0;
-                for($i=0;$i<$paginas;$i++){ ?>
+                		for($i=0;$i<$paginas;$i++){ ?>
 
 
 			<div class="row">
 
 				<div class="col-md-1" >
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</div> 
-				<div class="col-md-5 animate fadeInLeft <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+				<div class="col-md-5  <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
+					{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},
+					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},
+					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"},
+					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text2","placeholder":"TituloH3"},]'>
 
 					<img id="nuestros_asesores_i<?php echo $i; ?>_imagen" src="<?php $this->pnt('nuestros_asesores_i'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/meet-our-advisors-img1.jpg'); ?>"/></div>
 
 				<div class="col-md-6 animate fadeInRight">
 					<div class="meet-advisors-content">
-						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_nombre_asesor"><?php 
-						$this->pnt('carr'.$i.'_nombre_asesor','David Fernando<span><br>Founder & CEO</span>'); ?></h3>
+						<h3 class="" data-page="inicio" id="nuestros_asesores<?php echo $i; ?>_titulo"><?php 
+						$this->pnt('nuestros_asesores'.$i.'_titulo','David Fernando<span><br>Founder & CEO</span>'); ?></h3>
 
-						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text_asesor"><?php 
-						$this->pnt('carr'.$i.'_text_asesor','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						<p class="" data-page="inicio" id="nuestros_asesores<?php echo $i; ?>_text"><?php 
+						$this->pnt('nuestros_asesores'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
 						?></p>
 
-						<p class="" data-page="inicio" id="carr<?php echo $i; ?>_text_asesor2"><?php 
-						$this->pnt('carr'.$i.'_text_asesor2','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
+						<p class="" data-page="inicio" id="nuestros_asesores<?php echo $i; ?>_text2"><?php 
+						$this->pnt('nuestros_asesores'.$i.'_text2','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore. Love life’s sweetest reward Let it flow it floats back to you.'); 
 						?></p>
-
-						<ul class="social-text">
-							<li><a href="<?php $this->url_inicio(); ?>#." class="facebook">facebook</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="twitter">twitter</a></li>
-							<li><a href="<?php $this->url_inicio(); ?>#." class="youtube">youtube</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
