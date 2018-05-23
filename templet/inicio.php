@@ -8,7 +8,7 @@
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_1" data-editor="no"><?php $this->pnt('slider_1','Money Doesn’t<br>Come <span class="color-default">Without Care</span>'); ?></h2>					
 					<p class="jmy_web_div" data-page="inicio" id="slider_1_txt"><?php $this->pnt('slider_1_txt','Finding your next Financial Advisor is as easy as counting from one to five.'); ?></p>
 
-					<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-primary" data-text="Leer mas" >Leer mas</a>
+					<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-primary" data-text="Leer mas"  >Leer mas</a>
 
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos" >Contactanos</a>
 				</div>	
@@ -102,7 +102,7 @@
 		<div class="row">
 
 			<div class="col-md-6 animate fadeInLeft">
-				<h2 class="jmy_web_div " data-page="inicio" id="welcom_adv"><?php $this->pnt('welcom_adv','Welcome to Advisor'); ?></h2>
+				<h2 class="jmy_web_div " data-page="inicio" id="welcom_adv" data-editor="no"><?php $this->pnt('welcom_adv','Welcome to Advisor'); ?></h2>
 				<div class="height-10"></div>
 				<p class="jmy_web_div " data-page="inicio" id="welcom_adv_txt" data-editor="no"><?php $this->pnt('welcom_adv_txt','We have over 15 years of experience Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean Lorem ipsm dolor sit the power of consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.'); ?></p>
 				<div class="height-10"></div>
@@ -439,14 +439,14 @@
 				?></p>
 		</div>
 
-		<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_nuestros_asesores_" data-value="<?php
-			        $this->pnt('numero_carrusel_nuestros_asesores_','3'); 
+		<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_nuestros" data-value="<?php
+			        $this->pnt('numero_carrusel_nuestros','3'); 
 			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>
 		
 		<div class="single-item-carousel owl-carousel classic-arrows">
 			
 			<?php 
-            	     $paginas = $this->pnt('numero_carrusel_nuestros_asesores_','3',["return"=>true]); 
+            	     $paginas = $this->pnt('numero_carrusel_nuestros','3',["return"=>true]); 
               		 $contador = 0;
                 		for($i=0;$i<$paginas;$i++){ ?>
 
@@ -454,12 +454,10 @@
 			<div class="row">
 
 				<div class="col-md-1" >
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</div> 
-				<div class="col-md-5  <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
-					{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},
-					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},
-					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"},
-					{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text2","placeholder":"TituloH3"},]'>
+				<div class="col-md-5 animate fadeInLeft <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text2","placeholder":"parrafo2"}]'>
+
 
 					<img id="nuestros_asesores_i<?php echo $i; ?>_imagen" src="<?php $this->pnt('nuestros_asesores_i'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/meet-our-advisors-img1.jpg'); ?>"/></div>
 
@@ -477,7 +475,11 @@
 						?></p>
 					</div>
 				</div>
-			</div>
+
+				</div>
+
+
+			
 
 			<?php } ?>
 		</div>
