@@ -550,15 +550,22 @@
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="testimonial animate fadeInUp" data-delay="100">
+							<div data-delay="100" class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_b'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>_b" data-page="inicio" data-marco="works-container"  data-var='[
+								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen_b","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
+								{"type":"text","id":"happy<?php echo $i;?>_titulo_b","placeholder":"Nombre"},
+								{"type":"text","id":"happy<?php echo $i;?>_text_b","placeholder":"parrafo"}]'>
+
 								<div class="testimonial-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
+									<p class="" data-page="inicio" id="happy<?php echo $i; ?>_text_b"><?php 
+								$this->pnt('happy'.$i.'_text_b','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.'); ?></p>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="testimonials-author">
-											<img class="img-circle" src="images/review-author-img.png" alt="">
-											<p>Boris Hunt<span>(Sales Agent)</span></p>
+											<img class="img-circle" id="happy<?php echo $i; ?>_imagen_b" src="<?php $this->pnt('happy'.$i.'_imagen_b',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
+
+											<p class="" data-page="inicio" id="happy<?php echo $i; ?>_titulo_b"><?php 
+								$this->pnt('happy'.$i.'_titulo_b','Boris Hunt'); ?><span>(Sales Agent)</span></p>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -579,14 +586,14 @@
 					</div>
 
 						
-
+<?php } ?>
 
 				</div>
 
 
 					
 
-				<?php } ?>
+				
 			</div>
 			
 			
