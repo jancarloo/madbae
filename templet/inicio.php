@@ -491,66 +491,108 @@
 <section class="bg-blue">
 	<div class="container">
 		<div class="heading text-center animate bounceIn">
-			<h2>Happy Customers</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.</p>
+			<h2 class="jmy_web_div" data-page="inicio" data-editor="no" id="happy_coustomer_titu"><?php 
+							$this->pnt('happy_coustomer_titu','Happy Customers'); 
+							?></h2>
+			<p class="jmy_web_div" data-page="inicio" data-editor="no" id="happy_coustomer_tex"><?php 
+							$this->pnt('happy_coustomer_tex','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore.'); 
+			?></p>
 		</div>
+
+
 		<div class="row">
-			<div class="col-md-6">
-				<div class="testimonial animate fadeInUp">
-					<div class="testimonial-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-					</div>
+			<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_happy
+			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>		
+				<div class="single-item-carousel owl-carousel classic-arrows">
+					
+					<?php 
+		            	     $paginas = $this->pnt('numero_carrusel_happy','3',["return"=>true]); 
+		              		 $contador = 0;
+		                		for($i=0;$i<$paginas;$i++){ 
+		             ?>
+
+
 					<div class="row">
+
+						
+						
 						<div class="col-md-6">
-							<div class="testimonials-author">
-								<img class="img-circle" src="images/review-author-img.png" alt="">
-								<p>Boris Hunt<span>(Sales Agent)</span></p>
+							<div class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
+								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
+								{"type":"text","id":"happy<?php echo $i;?>_titulo","placeholder":"Nombre"},
+								{"type":"text","id":"happy<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+
+								<div class="testimonial-content">
+									<p class="" data-page="inicio" id="happy<?php echo $i; ?>_text"><?php 
+								$this->pnt('happy'.$i.'_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.'); ?></p>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="testimonials-author">
+											<img class="img-circle" id="happy<?php echo $i; ?>_imagen" src="<?php $this->pnt('happy'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
+
+											<p class="" data-page="inicio" id="happy<?php echo $i; ?>_titulo"><?php 
+								$this->pnt('happy'.$i.'_titulo','Boris Hunt'); ?><span>(Sales Agent)</span></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="text-right">
+											<ul class="rating">
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="text-right">
-								<ul class="rating">
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-								</ul>
+							<div class="testimonial animate fadeInUp" data-delay="100">
+								<div class="testimonial-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="testimonials-author">
+											<img class="img-circle" src="images/review-author-img.png" alt="">
+											<p>Boris Hunt<span>(Sales Agent)</span></p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="text-right">
+											<ul class="rating">
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+												<li><i class="fa fa-star"></i></li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+
 					</div>
+
+						
+
+
 				</div>
+
+
+					
+
+				<?php } ?>
 			</div>
-			<div class="col-md-6">
-				<div class="testimonial animate fadeInUp" data-delay="100">
-					<div class="testimonial-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="testimonials-author">
-								<img class="img-circle" src="images/review-author-img.png" alt="">
-								<p>Boris Hunt<span>(Sales Agent)</span></p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="text-right">
-								<ul class="rating">
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="text-center">
-			<a class="btn btn-bordered-dark cd-see-all iconic animate fadeInUp" data-delay="200" href="<?php $this->url_templet(); ?>javascript:void(0);" data-text="View All"><i class="icon-img-grid"></i>View All</a>
-		</div>
+			
+			
+		<?php /*  <div class="text-center">
+			<a class="btn btn-bordered-dark cd-see-all iconic animate fadeInUp" data-delay="200" href="javascript:void(0);" data-text="View All"><i class="icon-img-grid"></i>View All</a>
+		</div> */ ?>
 	</div>
 	
 	<div class="cd-testimonials-all">
@@ -636,256 +678,11 @@
 							</div>
 						</div>
 					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
+				</li>				
 			</ul>
 		</div>
 
-		<a href="<?php $this->url_templet(); ?>javascript:void(0);" class="close-btn">Close</a>
+		<a href="javascript:void(0);" class="close-btn">Cerrar</a>
 		
 	</div>
 	
