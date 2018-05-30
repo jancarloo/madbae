@@ -501,8 +501,9 @@
 
 
 		<div class="row">
-			<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_happy
-			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>		
+			<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
+        $this->pnt('numero_carrusel_happy','3'); 
+        ?>" data-titulo="Inica el número de páginas a mostrar"></div>		
 				<div class="single-item-carousel owl-carousel classic-arrows">
 					
 					<?php 
