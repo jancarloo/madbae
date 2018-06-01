@@ -1,31 +1,27 @@
 
       		
-			<footer id="footer">
+			<footer id="footer" class="dark">
 				<div class="container">
-					<div class="footer-top clearfix">
-						
-						<div class="row">
-							<div class="col-md-3 col-sm-3">
-								<div class="footer-logo animate fadeInLeft"><a href="<?php $this->url_inicio(); ?>index.html"><img src="images/footer-logo.png" alt=""></a></div>
-							</div>
-							<div class="col-md-9 col-sm-9">
-								<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem or phone +11 987 654 3210 ipsum quia dolor sit amet, consectetur.</p>
-							</div>
-						</div>
-					
+					<div class="footer-top clearfix">					
 						<div class="height-50"></div>
 						
 						<div class="footer-left">
 							<div class="footer-address-widget clearfix">
 								<ul>
-									<li><i class="icon-telephone114"></i>+1 900 234 567<a href="<?php $this->url_inicio(); ?>mailto:support@advisor.com">supprt@advisor.com</a></li>
-									<li><i class="icon-icons74"></i>Manhattan Hall,<span>Advisor Ltd 1258, Melbourne, australia</span></li>
+								
+
+									<li class="jmy_web_div" data-page="footer" id="telefono_correo" data-editor="no">
+						<?php $this->pnt('telefono_correo','<i class="icon-telephone114"></i>+1 900 234 567<a href="<?php $this->url_inicio(); ?>mailto:support@advisor.com">supprt@advisor.com</a>',["secundario"=>"footer"]);
+						?></li>
+									<li class="jmy_web_div" data-page="footer" id="direccion_footer" data-editor="no">
+						<?php $this->pnt('direccion_footer','<i class="icon-icons74"></i>Manhattan Hall,<span>Advisor Ltd 1258, Melbourne, australia</span>',["secundario"=>"footer"]); 
+						?></li>
 								</ul>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<div class="usefull-links-widget clearfix">
-										<h4>Usefull Links</h4>
+									<div class="usefull-links-widget jmy_web_div" data-page="footer" id="vinetas_footer" data-editor="no">
+						<?php $this->pnt('vinetas_footer','<h4>Usefull Links</h4>
 										<ul>
 											<li><a href="<?php $this->url_inicio(); ?>index.html">Home</a></li>
 											<li><a href="<?php $this->url_inicio(); ?>about-us.html">About Us</a></li>
@@ -39,12 +35,14 @@
 											<li><a href="<?php $this->url_inicio(); ?>services.html">Commodities</a></li>
 											<li><a href="<?php $this->url_inicio(); ?>services.html">Investments</a></li>
 											<li><a href="<?php $this->url_inicio(); ?>services.html">Retirement</a></li>
-										</ul>
+										</ul>',["secundario"=>"footer"]); 
+						?> 
+										
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="twitter-widget clearfix">
-										<h4>Twitter Feeds</h4>
+									<div class="twitter-widget clearfix jmy_web_div" data-page="footer" id="twitter" data-editor="no">
+						<?php $this->pnt('twitter','<h4>Twitter Feeds</h4>
 										<div class="tweet">
 											<i class="icon-twitter-1"></i>
 											<p><a href="<?php $this->url_inicio(); ?>#">@Rotography</a> Please kindly use our Support Forum: <a href="<?php $this->url_inicio(); ?>#.">pixelatic.co.uk.</a>
@@ -56,7 +54,9 @@
 											<p><a href="<?php $this->url_inicio(); ?>#">@Rotography</a> Please kindly use our Support Forum: <a href="<?php $this->url_inicio(); ?>#.">pixelatic.co.uk.</a>
 											<span>about a month ago</span>
 											</p>
-										</div>
+										</div>',["secundario"=>"footer"]); 
+						?>
+										
 									</div>
 								</div>
 							</div>

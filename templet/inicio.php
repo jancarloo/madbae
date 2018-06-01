@@ -1,6 +1,6 @@
 <!-- MAIN BANNER -->
 <section class="cd-hero">
-	<ul class="cd-hero-slider autoplay">
+	<ul class="cd-hero-slider autopla">
 
 		<li class="selected">
 			<div class="cd-full-width">
@@ -13,7 +13,7 @@
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos" >Contactanos</a>
 				</div>	
 			</div>
-		</li>
+		</li> 
 
 		<li>
 			<div class="cd-full-width">
@@ -501,9 +501,9 @@
 
 
 		<div class="row">
-			<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
+			<div class=" jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
         $this->pnt('numero_carrusel_happy','3'); 
-        ?>" data-titulo="Inica el número de páginas a mostrar"></div>		
+        ?>" data-titulo="Inica el número de páginas a mostrar"></div>			
 				<div class="single-item-carousel owl-carousel classic-arrows">
 					
 					<?php 
@@ -516,8 +516,8 @@
 					<div class="row">
 
 						
-						
-						<div class="col-md-6">
+						<div class="col-md-1">	</div>
+						<div class="col-md-5">
 							<div class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
 								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
 								{"type":"text","id":"happy<?php echo $i;?>_titulo","placeholder":"Nombre"},
@@ -550,7 +550,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<div data-delay="100" class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_b'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>_b" data-page="inicio" data-marco="works-container"  data-var='[
 								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen_b","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
 								{"type":"text","id":"happy<?php echo $i;?>_titulo_b","placeholder":"Nombre"},
