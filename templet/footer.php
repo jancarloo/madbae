@@ -63,16 +63,21 @@
 						</div>
 						<div class="footer-right">
 							<div class="newsletter-widget">
-								<h4>Our Newsletter</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod.</p>
+								<h4 class="jmy_web_div" data-page="footer" id="newsletter" data-editor="no" ><?php $this->pnt('newsletter','Our Newsletter'); ?></h4>
+								<p class="jmy_web_div" data-page="footer" id="newsletter_text" data-editor="no" ><?php $this->pnt('newsletter_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod.'); ?></p>
+
 								<div class="form">
 									<p class="subscribe_success" id="subscribe_success" style="display:none;"></p>
 									<p class="subscribe_error" id="subscribe_error" style="display:none;"></p>
 									<form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
-										<input type="text" data-delay="300" placeholder="Your Name" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" >
-										<input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" >
-										<button class="btn btn-primary" name="Subscribe" type="submit" data-text="Subscribe" onClick="validateSubscription();">Subscribe</button>
+
+										<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-delay="300" data-campo="Nombre" placeholder="Your Name" required>
+
+										<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-delay="300" data-campo="Email" placeholder="Email Address" required>
+										
+										<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Suscribirse</button>
 									</form>
+
 								</div>
 								<ul class="social">
 									<li class="animate bounceIn"><a href="<?php $this->url_inicio(); ?>#." class="facebook"><i class="icon-facebook-1"></i></a></li>
@@ -88,8 +93,36 @@
 				<div class="footer-bottom">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-sm-6"><p>Coyright © 2016 Advisor. All rights reserved.</p></div>
-							<div class="col-md-6 col-sm-6"><p class="text-right">Designed by <a href="<?php $this->url_inicio(); ?>#.">Brighthemes</a></p></div>
+							<div class="col-md-6 col-sm-6">
+								<p class="jmy_web_div" data-page="footer" id="copyrigth_footer" data-editor="no">
+						<?php $this->pnt('copyrigth_footer','Copyright © 2016 Advisor. All rights reserved.',["secundario"=>"footer"]); 
+						?></p>
+							</div>
+
+							<div class="col-md-3 col-sm-3">
+								<p class="text-right jmy_web_div" data-page="footer" id="diseñador_footer" data-editor="no">
+						<?php $this->pnt('diseñador_footer','Designed by ',["secundario"=>"footer"]); 
+						?> </p>
+							</div>
+
+							<div class="col-md-3 col-sm-3">
+
+								
+							
+							
+
+								<p class="text-lefth">
+									<a href="<?php 
+		                      $this->pnt( 'footer_disenadopor_href', '#', ["secundario"=>"footer"] ); 
+							?>" title="" class="disenado jmy_web_div" id="footer_disenadopor" data-page="footer" data-editor="no"><?php 
+		                      $this->pnt( 'footer_disenadopor',
+										  'Comsis',
+										  ["secundario"=>"footer"]
+								); 
+							?></a></p>
+
+						
+							</div>
 						</div>
 					</div>
 				</div>

@@ -603,96 +603,7 @@
 		</div> */ ?>
 	</div>
 	
-	<div class="cd-testimonials-all">
-		<div class="cd-testimonials-all-wrapper">
-			<ul>
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>				
-			</ul>
-		</div>
-
-		<a href="javascript:void(0);" class="close-btn">Cerrar</a>
-		
-	</div>
+	
 	
 </section><!-- / BENIFITS -->
 
@@ -703,9 +614,13 @@
 	<div class="container">
 		<div class="request-a-callback clearfix animate fadeInUp">
 			<div class="request-a-callback-content">
-				<h3>Request a Call Back</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut.</p>
-				<p><strong>For Investment:</strong> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem or phone +11 987 654 3210 ipsum quia dolor sit amet, consectetur.</p>
+				<h3 class="jmy_web_div" data-page="inicio" id="request" data-editor="no" ><?php 
+								$this->pnt('request','Request a Call Back'); ?></h3>
+
+				<p class="jmy_web_div" data-page="inicio" id="requesttext" data-editor="no" ><?php 
+								$this->pnt('requesttext','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut.'); ?></p>
+				<p class="jmy_web_div" data-page="inicio" id="requesttext2" data-editor="no" ><?php 
+								$this->pnt('requesttext2','<strong>For Investment:</strong> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem or phone +11 987 654 3210 ipsum quia dolor sit amet, consectetur.'); ?></p>
 			</div>
 			<div class="request-a-callback-form">
 				<form>
@@ -718,15 +633,15 @@
 
 					<div class="styled-select">
 						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
-							<option>I would like to discuss:</option>
-							<option>Personal Finance</option>
-							<option>Stock trading</option>
-							<option>Retirement</option>
-							<option>Other</option>
+							<option>Deseo que me contacten</option>
+							<option>Asesoria</option>
+							<option>Dudas</option>
+							<option>Seguimiento</option>
+							<option>Otros</option>
 						</select>
 					</div>
 
-					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Submit</button>
+					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Enviar</button>
 
 				</form>
 			</div>
