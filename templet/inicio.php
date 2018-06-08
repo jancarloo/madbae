@@ -1,8 +1,26 @@
 <!-- MAIN BANNER -->
 <section class="cd-hero">
+<div class=" jmy_web_slider" data-page="inicio" data-tabla="vistaweb"  id="marco1" data-marco="marco1" 
+            <?php
+            $va=[];
+            for ($i=0; $i < 3 ; $i++){
+
+                
+                $va[] = [ "type"=>"imagen",
+                        "id"=>"slide_img_".$i,
+                        "class"=>"slide_img_".$i,
+                        //"idadd"=>"",
+                        "width"=>"1920",
+                        "height"=>"799",
+                        "url"=>$this->url_templet(["return"=>true]).'images/slides/slide1.png',
+                        ];
+            }
+            ?>
+data-var='<?php echo json_encode($va); ?>' ></div>
+
 	<ul class="cd-hero-slider autoplay">
 
-		<li class="selected">
+		<li class="selected" style="background-image:<?php $this->pnt('slide_img_0', $this->url_templet(['return'=>true]).'images/slides/slide1.png'); ?> !important">
 			<div class="cd-full-width">
 				<div class="container">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_1" data-editor="no"><?php $this->pnt('slider_1','Money Doesn’t<br>Come <span class="color-default">Without Care</span>'); ?></h2>					
