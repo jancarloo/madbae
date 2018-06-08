@@ -114,7 +114,12 @@
 					<!-- HEADER INNER -->
 					<div class="header clearfix">
 						
-						<a href="<?php $this->url_templet(); ?>index.html" class="logo"><img src="<?php $this->url_templet(); ?>images/logo.png" alt=""></a>
+						
+
+						<div id="logo" class="logo">
+								<div class="jmy_web_slider" id="logo_top" data-page="inicio" data-marco="logo_top" data-var='[{"type":"imagen","id":"logo_top_img","url":"<?php $this->url_templet(); ?>images/logo.png"}]' ><a href="<?php $this->url_inicio(); ?>"><img alt="" title="" id="logo_top_img" src="<?php $this->pnt('logo_top_img',$this->url_templet(['return'=>true]).'images/logo.png'); ?>"/></a></div>
+								
+							</div><!-- /#logo -->
 						
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav" aria-expanded="false">
 							<span class="sr-only">Barra de navegación</span>

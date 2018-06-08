@@ -1,5 +1,6 @@
 <!-- MAIN BANNER -->
 <section class="cd-hero">
+<<<<<<< HEAD
 <div class=" jmy_web_slider" data-page="inicio" data-tabla="vistaweb"  id="marco1" data-marco="marco1" 
             <?php
             $va=[];
@@ -19,6 +20,9 @@
 data-var='<?php echo json_encode($va); ?>' ></div>
 
 	<ul class="cd-hero-slider autoplay">
+=======
+	<ul class="cd-hero-slider autopla">
+>>>>>>> d01c9131b3ee776e2d841976be40c592e387a9a3
 
 		<li class="selected" style="background-image:<?php $this->pnt('slide_img_0', $this->url_templet(['return'=>true]).'images/slides/slide1.png'); ?> !important">
 			<div class="cd-full-width">
@@ -31,7 +35,7 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos" >Contactanos</a>
 				</div>	
 			</div>
-		</li>
+		</li> 
 
 		<li>
 			<div class="cd-full-width">
@@ -519,9 +523,9 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 
 
 		<div class="row">
-			<div class="jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
+			<div class=" jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
         $this->pnt('numero_carrusel_happy','3'); 
-        ?>" data-titulo="Inica el número de páginas a mostrar"></div>		
+        ?>" data-titulo="Inica el número de páginas a mostrar"></div>			
 				<div class="single-item-carousel owl-carousel classic-arrows">
 					
 					<?php 
@@ -534,8 +538,8 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 					<div class="row">
 
 						
-						
-						<div class="col-md-6">
+						<div class="col-md-1">	</div>
+						<div class="col-md-5">
 							<div class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
 								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
 								{"type":"text","id":"happy<?php echo $i;?>_titulo","placeholder":"Nombre"},
@@ -568,7 +572,7 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<div data-delay="100" class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_b'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>_b" data-page="inicio" data-marco="works-container"  data-var='[
 								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen_b","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
 								{"type":"text","id":"happy<?php echo $i;?>_titulo_b","placeholder":"Nombre"},
@@ -621,96 +625,7 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 		</div> */ ?>
 	</div>
 	
-	<div class="cd-testimonials-all">
-		<div class="cd-testimonials-all-wrapper">
-			<ul>
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li class="cd-testimonials-item">
-					<div class="testimonial">
-						<div class="testimonial-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut labore Love life’s sweetest.</p>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="testimonials-author">
-									<img class="img-circle" src="images/review-author-img.png" alt="">
-									<p>Boris Hunt<span>(Sales Agent)</span></p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="text-right">
-									<ul class="rating">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</li>				
-			</ul>
-		</div>
-
-		<a href="javascript:void(0);" class="close-btn">Cerrar</a>
-		
-	</div>
+	
 	
 </section><!-- / BENIFITS -->
 
@@ -721,9 +636,13 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 	<div class="container">
 		<div class="request-a-callback clearfix animate fadeInUp">
 			<div class="request-a-callback-content">
-				<h3>Request a Call Back</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut.</p>
-				<p><strong>For Investment:</strong> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem or phone +11 987 654 3210 ipsum quia dolor sit amet, consectetur.</p>
+				<h3 class="jmy_web_div" data-page="inicio" id="request" data-editor="no" ><?php 
+								$this->pnt('request','Request a Call Back'); ?></h3>
+
+				<p class="jmy_web_div" data-page="inicio" id="requesttext" data-editor="no" ><?php 
+								$this->pnt('requesttext','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor exercitationemut.'); ?></p>
+				<p class="jmy_web_div" data-page="inicio" id="requesttext2" data-editor="no" ><?php 
+								$this->pnt('requesttext2','<strong>For Investment:</strong> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non qui dolorem or phone +11 987 654 3210 ipsum quia dolor sit amet, consectetur.'); ?></p>
 			</div>
 			<div class="request-a-callback-form">
 				<form>
@@ -736,15 +655,15 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 
 					<div class="styled-select">
 						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
-							<option>I would like to discuss:</option>
-							<option>Personal Finance</option>
-							<option>Stock trading</option>
-							<option>Retirement</option>
-							<option>Other</option>
+							<option>Deseo que me contacten</option>
+							<option>Asesoria</option>
+							<option>Dudas</option>
+							<option>Seguimiento</option>
+							<option>Otros</option>
 						</select>
 					</div>
 
-					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Submit</button>
+					<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Enviar</button>
 
 				</form>
 			</div>
