@@ -106,6 +106,15 @@
 							 ?></li>
 							<li class="jmy_web_div" data-page="header" id="horari_head" data-editor="no" ><?php $this->pnt('horari_head','<i class="icon-icons20"></i>'.' Mon to Sat 08:00 - 16:30',["secundario"=>"header"]); 
 							?></li>
+							 <p class="text-lefth">
+									<a href="<?php 
+		                      $this->pnt( 'footer_disenadopor_href', '#', ["secundario"=>"footer"] ); 
+							?>" title="" class="disenado jmy_web_div" id="footer_disenadopor" data-page="footer" data-editor="no"><?php 
+		                      $this->pnt( 'footer_disenadopor',
+										  'Comsis',
+										  ["secundario"=>"footer"]
+								); 
+							?></a></p>
 						</ul>
 
 					</div>
