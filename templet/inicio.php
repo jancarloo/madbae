@@ -1,4 +1,5 @@
 <!-- MAIN BANNER -->
+<!-- SE REVISRÁ ESTE CÓDIGO -->
 <section class="cd-hero">
 <div class=" jmy_web_slider" data-page="inicio" data-tabla="vistaweb"  id="marco1" data-marco="marco1" 
             <?php
