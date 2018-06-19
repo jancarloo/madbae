@@ -1,6 +1,5 @@
 <!-- MAIN BANNER -->
 <section class="cd-hero">
-<<<<<<< HEAD
 <div class=" jmy_web_slider" data-page="inicio" data-tabla="vistaweb"  id="marco1" data-marco="marco1" 
             <?php
             $va=[];
@@ -19,10 +18,8 @@
             ?>
 data-var='<?php echo json_encode($va); ?>' ></div>
 
-	<ul class="cd-hero-slider autoplay">
-=======
+
 	<ul class="cd-hero-slider autopla">
->>>>>>> d01c9131b3ee776e2d841976be40c592e387a9a3
 
 		<li class="selected" style="background-image:<?php $this->pnt('slide_img_0', $this->url_templet(['return'=>true]).'images/slides/slide1.png'); ?> !important">
 			<div class="cd-full-width">
