@@ -1,30 +1,14 @@
+
+		
 <!-- MAIN BANNER -->
-<!-- SE REVISRÁ ESTE CÓDIGO -->
 <section class="cd-hero">
-<div class=" jmy_web_slider" data-page="inicio" data-tabla="vistaweb"  id="marco1" data-marco="marco1" 
-            <?php
-            $va=[];
-            for ($i=0; $i < 3 ; $i++){
+	<ul class="cd-hero-slider">
+		<li class="selected jmy_web_slider" id="img_slider0" data-page="inicio" data-marco="img_slider0" data-var='[{"type":"imagen","id":"img_slider_0","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul2.jpg"}]' >
 
-                
-                $va[] = [ "type"=>"imagen",
-                        "id"=>"slide_img_".$i,
-                        "class"=>"slide_img_".$i,
-                        //"idadd"=>"",
-                        "width"=>"1920",
-                        "height"=>"799",
-                        "url"=>$this->url_templet(["return"=>true]).'images/slides/slide1.png',
-                        ];
-            }
-            ?>
-data-var='<?php echo json_encode($va); ?>' ></div>
+			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_0', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul2.jpg'); ?>"  alt=""   >
 
-
-	<ul class="cd-hero-slider autopla">
-
-		<li class="selected" style="background-image:<?php $this->pnt('slide_img_0', $this->url_templet(['return'=>true]).'images/slides/slide1.png'); ?> !important">
 			<div class="cd-full-width">
-				<div class="container">
+			<div class="container">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_1" data-editor="no"><?php $this->pnt('slider_1','Money Doesn’t<br>Come <span class="color-default">Without Care</span>'); ?></h2>					
 					<p class="jmy_web_div" data-page="inicio" id="slider_1_txt"><?php $this->pnt('slider_1_txt','Finding your next Financial Advisor is as easy as counting from one to five.'); ?></p>
 
@@ -33,11 +17,16 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 					<a href="<?php $this->url_inicio(); ?>contact-us.html" class="btn btn-default" data-text="Contactanos" >Contactanos</a>
 				</div>	
 			</div>
-		</li> 
+		</li>
 
-		<li>
-			<div class="cd-full-width">
-				<div class="container">
+		
+
+		<li class="jmy_web_slider" id="img_slider1" data-page="inicio" data-marco="img_slider1" data-var='[{"type":"imagen","id":"img_slider_1","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul.jpg"}]' >
+
+			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_1', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul.jpg'); ?>"  alt=""   >
+
+			<div class="cd-full-width" >
+			<div class="container">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_2" data-editor="no">
 						<?php $this->pnt('slider_2','Friendly <span class="color-default">Assistance</span>'); 
 						?></h2>
@@ -51,7 +40,10 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 			</div>
 		</li>
 
-		<li>
+		<li class="jmy_web_slider" id="img_slider2" data-page="inicio" data-marco="img_slider2" data-var='[{"type":"imagen","id":"img_slider_2","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul3.jpg"}]' >
+
+			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_2', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul3.jpg'); ?>"  alt=""   >
+
 			<div class="cd-full-width">
 				<div class="container text-center">
 					<h2 class="jmy_web_div color-white" data-page="inicio" id="slider_3" data-editor="no">
@@ -66,7 +58,9 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 			</div>
 		</li>
 
-		<li>
+		<li class="jmy_web_slider" id="img_slider3" data-page="inicio" data-marco="img_slider3" data-var='[{"type":"imagen","id":"img_slider_3","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul4.jpg"}]' >
+
+			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_3', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul4.jpg'); ?>"  alt=""   >
 			<div class="cd-full-width">
 				<div class="container text-right">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_4" data-editor="no">
@@ -132,10 +126,22 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 				<div class="height-40"></div>
 			</div>
 
+
+
 			<div class="col-md-6 animate fadeInRight">
 				<div class="video-widget">
-					<img src="images/video-thumb.jpg" class="img-shadow" alt="">
-					<a href="<?php $this->url_templet(); ?>http://vimeo.com/36031564" class="fancybox-media"><i class="fa fa-play"></i></a>
+
+					<a href="<?php $this->pnt( 'video_disenadopor_href', '#', ["secundario"=>"inicio"] ); 
+					?>" title="" class="disenado jmy_web_div fancybox-media" id="video_inicio" data-page="inicio" data-editor="no"><?php 
+						$this->pnt( 'video_inicio',
+									' ',
+									["secundario"=>"inicio"]
+						);						
+					?></a>
+					<i class="fa fa-play jmy_web_slider" id="video_imagen1" data-page="inicio" data-marco="video_imagen1" data-var='[{"type":"imagen","id":"video_imagen_1","url":"<?php $this->url_templet(); ?>images/video-thumb.jpg"}]' >
+
+					<img height="100%" width="100%" src="<?php $this->pnt('video_imagen_1', $this->url_templet(['return'=>true]).'images/video-thumb.jpg'); ?>" class="img-shadow" alt="">
+</i>
 				</div>
 			</div>
 		</div>
@@ -363,18 +369,18 @@ data-var='<?php echo json_encode($va); ?>' ></div>
 		<div class="row">
 			<div class="col-md-6 animate fadeInLeft">
 				<ul class="image-list-classic ">
-					<li  >
-
+					<li>
 					  <div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont" data-page="inicio" data-marco="bro_imagen_cont" data-var='[{"type":"imagen","id":"bro_imagen","url":"<?php $this->url_templet(); ?>images/behind.jpg"}]' >
 
 					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen" src="<?php $this->pnt('bro_imagen',$this->url_templet(['return'=>true]).'images/behind.jpg'); ?>"/>
 					  </div>
 					</li>
-
-					<li><div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2" data-button="down" data-var='[{"type":"imagen","id":"bro_imagen2","url":"<?php $this->url_templet(); ?>images/behind2.jpg"}]' >
+					<li>
+						<div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2" data-button="down" data-var='[{"type":"imagen","id":"bro_imagen2","url":"<?php $this->url_templet(); ?>images/behind2.jpg"}]' >
 
 					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen2" src="<?php $this->pnt('bro_imagen2',$this->url_templet(['return'=>true]).'images/behind2.jpg'); ?>"/>
-					  </div></li>
+					  </div>
+					</li>
 				</ul>
 			</div>
 			<div class="col-md-6 animate fadeInRight">
