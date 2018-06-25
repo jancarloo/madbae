@@ -10,7 +10,7 @@ CKEDITOR.editorConfig = function( config ) {
   	extraPlugins = 'imageuploader';
 
 	config.toolbarCanCollapse = true;
-    config.extraPlugins = 'jmyfn';
+    config.extraPlugins = ['jmyfn','link'];
     config.toolbarGroups = [
     { name: 'others', groups: [ 'others' ] },
     { name: 'document', groups: [ 'document', 'doctools', 'mode' ] },

@@ -11,6 +11,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 	config.toolbarCanCollapse = true;
     config.extraPlugins = 'jmyfn';
+    config.extraPlugins = 'link,jmyfn';
     config.toolbarGroups = [
     { name: 'others', groups: [ 'others' ] },
     { name: 'document', groups: [ 'document', 'doctools', 'mode' ] },

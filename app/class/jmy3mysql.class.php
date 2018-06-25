@@ -67,7 +67,7 @@ class JMY3MySQL {
         for($i=0;$i<count($d);$i++){
           $t=$d[$i];
           $t=trim(strtolower($t));if($t!=''){
-              $n='CREATE TABLE IF NOT EXISTS `'.DB_PX.$t.'` (`ID` int(11) NOT NULL AUTO_INCREMENT,`ID_F` varchar(50) NOT NULL,`ID_D`  int(11) NOT NULL,`V` text NOT NULL,`ID_S` int(3) NOT NULL,`TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
+              $n='CREATE TABLE IF NOT EXISTS `'.DB_PX.$t.'` (`ID` int(11) NOT NULL AUTO_INCREMENT,`ID_F` varchar(250) NOT NULL,`ID_D`  int(11) NOT NULL,`V` text NOT NULL,`ID_S` int(3) NOT NULL,`TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (`ID`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;';
               $tabla = $t;$tm[]=$n;
               if(!$cu->query($n)){$error[] = "Tabla existente-".$cu->error;$o[$t]=0;}else{$o[$t]=1;}
               $n = 'ALTER TABLE `'.DB_PX.$t.'` ADD UNIQUE KEY `ID` (`ID`), ADD KEY `ID_F` (`ID_F`), ADD KEY `ID_D` (`ID_D`);';

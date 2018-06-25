@@ -129,19 +129,24 @@
 
 
 			<div class="col-md-6 animate fadeInRight">
-				<div class="video-widget">
-
-					<a href="<?php $this->pnt( 'video_disenadopor_href', '#', ["secundario"=>"inicio"] ); 
-					?>" title="" class="disenado jmy_web_div fancybox-media" id="video_inicio" data-page="inicio" data-editor="no"><?php 
-						$this->pnt( 'video_inicio',
-									' ',
-									["secundario"=>"inicio"]
-						);						
+				<div class="video-widget jmy_web_slider XDJ1"  id="video_imagen1" data-page="inicio" data-marco="video_imagen1" data-var='[{"type":"imagen","id":"video_imagen_1","url":"<?php $this->url_templet(); ?>images/video-thumb.jpg"}]' >
+					
+					<a href="<?php $this->pnt( 'video_disenadopor_href', 'http://vimeo.com/36031564'); 
+					?>" title="" class="disenado jmy_web_div fancybox-media" id="video_disenadopor" data-page="inicio" data-editor="no"><?php 
+						$this->pnt( 'video_disenadopor',
+									'<i class="fa fa-play"></i> '
+									
+						);	
+											
 					?></a>
-					<i class="fa fa-play jmy_web_slider" id="video_imagen1" data-page="inicio" data-marco="video_imagen1" data-var='[{"type":"imagen","id":"video_imagen_1","url":"<?php $this->url_templet(); ?>images/video-thumb.jpg"}]' >
+					
+					
+					
+						
+					<img  src="<?php $this->pnt('video_imagen_1', $this->url_templet(['return'=>true]).'images/video-thumb.jpg'); ?>" class="img-shadow" alt="" height="100%" width="100%">
+					
 
-					<img height="100%" width="100%" src="<?php $this->pnt('video_imagen_1', $this->url_templet(['return'=>true]).'images/video-thumb.jpg'); ?>" class="img-shadow" alt="">
-</i>
+
 				</div>
 			</div>
 		</div>
@@ -308,19 +313,27 @@
 </div><!-- / FUNFACTS -->
 
 
-
 <!-- DIFFERENT SERVICES -->
-<section class="different-services text-center parallax">
+<section class=" text-center parallax jmy_web_slider different-service" id="back_love" data-page="inicio" data-marco="back_love" data-var='[{"type":"imagen","id":"img_back_love","url":"<?php $this->url_templet(); ?>images/parallax/1.jpg"}]' style="background-image: url(<?php $this->pnt('img_back_love', $this->url_templet(['return'=>true]).'images/parallax/1.jpg'); ?>); no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;">
+
+<?php /*
+	<li class="jmy_web_slider" id="img_slider3" data-page="inicio" data-marco="img_slider3" data-var='[{"type":"imagen","id":"img_slider_3","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul4.jpg"}]' >
+
+	<img height="100%" width="100%" src="<?php $this->pnt('img_slider_3', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul4.jpg'); ?>"  alt=""   >
+	
+*/?>
+
 	<div class="container">
 		<div class="heading animate bounceIn">
-			<h1 class="color-white jmy_web_div" data-page="inicio" id="amamos_titulo"  ><?php 
+			<h1 class="color-white jmy_web_div" data-page="inicio" id="amamos_titulo" data-editor="no"  ><?php 
 				$this->pnt('amamos_titulo','We Love What We Do'); 
 				?></h1>
-			<p class="color-white jmy_web_div" data-page="inicio" id="amamos_texto"  ><?php 
+			<p class="color-white jmy_web_div" data-page="inicio" id="amamos_texto" data-editor="no" ><?php 
 				$this->pnt('amamos_texto','Lorem ipsum dolor sit amet, Let it it floats back to you.'); 
 				?></p>
 		</div>
 	</div>
+		
 </section><!-- / DIFFERENT SERVICES -->
 
 

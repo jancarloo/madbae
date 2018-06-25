@@ -421,7 +421,7 @@ ALL SECTIONS
 .funfacts.two .counter{ padding-top:25px;}
 .funfacts.two .counter:after{ right: 50px;top: 55px; background-image:url(../images/slash2.png);}
 .funfacts.two .counter span, .funfacts.two .counter-details{ color:#fff;}
-.different-services{ background:url(../images/parallax/1.jpg) no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;}
+/*.different-services{ background:url(../images/parallax/1.jpg) no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;}*/
 .different-services .advisor-overlay{ background:rgba(0,0,0,0.80);}
 .services{ margin:-252px -15px 100px;}
 .service-box{ background:#fff; border-top:7px solid transparent; padding:38px 34px;}

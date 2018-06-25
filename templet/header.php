@@ -63,7 +63,9 @@
 	<!-- HEADER SCRIPTS
     
     ================================================== -->
-	<script src="js/modernizr.js"></script>
+	<script src="js/modernizr.js">
+	.different-services{ no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;}
+	</script>
 	
 	<link rel="stylesheet" type="text/css" href="<?php $this->url_templet(); ?>stylesheets/bootstrap.css" >
 
@@ -108,11 +110,11 @@
 							?></li>
 							 <p class="text-lefth">
 									<a href="<?php 
-		                      $this->pnt( 'footer_disenadopor_href', '#', ["secundario"=>"footer"] ); 
-							?>" title="" class="disenado jmy_web_div" id="footer_disenadopor" data-page="footer" data-editor="no"><?php 
-		                      $this->pnt( 'footer_disenadopor',
+		                      $this->pnt( 'header_disenadopor_href', '#', ["secundario"=>"header"] ); 
+							?>" title="" class="disenado jmy_web_div" id="header_disenadopor" data-page="header" data-editor="no"><?php 
+		                      $this->pnt( 'header_disenadopor',
 										  'Comsis',
-										  ["secundario"=>"footer"]
+										  ["secundario"=>"header"]
 								); 
 							?></a></p>
 						</ul>

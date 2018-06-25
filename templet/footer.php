@@ -116,7 +116,7 @@
 		                      $this->pnt( 'footer_disenadopor_href', '#', ["secundario"=>"footer"] ); 
 							?>" title="" class="disenado jmy_web_div" id="footer_disenadopor" data-page="footer" data-editor="no"><?php 
 		                      $this->pnt( 'footer_disenadopor',
-										  'Comsis',
+										  'Comsi',
 										  ["secundario"=>"footer"]
 								); 
 							?></a></p>
