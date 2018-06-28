@@ -253,7 +253,8 @@
 
 <!-- FUNFACTS -->
 <div class="container">
-	<div class="funfacts text-center">
+	<div class="funfacts text-center jmy_web_slider" id="helping_back1" data-page="inicio" data-marco="helping_back1" data-var='[{"type":"imagen","id":"helping_back","url":"<?php $this->url_templet(); ?>images/funfact-bg.jpg"}]' style="background: url(<?php $this->pnt('helping_back', $this->url_templet(['return'=>true]).'images/funfact-bg.jpg'); ?>); background-repeat: no-repeat; background-size: cover; height:397px; position:relative; margin-bottom:-117px; z-index:100;">
+
 		<div class="advisor-overlay"></div>
 		<div class="funfacts-inner">
 			<h2 class="jmy_web_div" data-page="inicio" id="titulo_satisfaccion"  ><?php 

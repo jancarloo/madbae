@@ -405,7 +405,7 @@ ALL SECTIONS
 .image-and-text-box .bordered-thumb:before{ position:absolute; left:5px; right:5px; top:5px; bottom:5px; border:1px solid #fff; content:"";}
 .image-and-text-box .bordered-thumb img{ width:100%;}
 .image-and-text-box p{ margin-bottom:30px;}
-.funfacts{ background:url(../images/funfact-bg.jpg) no-repeat center 0; height:397px; position:relative; margin-bottom:-117px; z-index:100;}
+/*.funfacts{ background:url(../images/funfact-bg.jpg) no-repeat center 0; height:397px; position:relative; margin-bottom:-117px; z-index:100;}*/
 .funfacts h2{ margin-bottom:0;}
 .funfacts .funfacts-inner{ padding:75px 40px 0; position:relative;}
 .funfacts .advisor-overlay{ background:rgba(255,255,255,0.85);}
