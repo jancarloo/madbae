@@ -63,19 +63,23 @@
 						</div>
 						<div class="footer-right">
 							<div class="newsletter-widget">
-								<h4 class="jmy_web_div" data-page="footer" id="newsletter" data-editor="no" ><?php $this->pnt('newsletter','Our Newsletter'); ?></h4>
-								<p class="jmy_web_div" data-page="footer" id="newsletter_text" data-editor="no" ><?php $this->pnt('newsletter_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod.'); ?></p>
+								<h4 class="jmy_web_div" data-page="header" id="newsletter" data-editor="no" ><?php $this->pnt('newsletter','Our Newslette',["secundario"=>"header"]); ?></h4>
+
+								<p class="jmy_web_div" data-page="header" id="newsletter_text" data-editor="no" ><?php $this->pnt('newsletter_text','Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod.',["secundario"=>"header"]); ?></p>
 
 								<div class="form">
-									<p class="subscribe_success" id="subscribe_success" style="display:none;"></p>
+									<p class="subscribe_success " id="subscribe_success" style="display:none;"></p>
 									<p class="subscribe_error" id="subscribe_error" style="display:none;"></p>
 									<form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
-
-										<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-delay="300" data-campo="Nombre" placeholder="Your Name" required>
-
-										<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-delay="300" data-campo="Email" placeholder="Email Address" required>
+									
+										<input type="text"data-delay="300" placeholder="Your Name" name="subscribe_name" id="subscribe_name" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Nombre" required >
 										
-										<button class="btn btn-primary jmy_web_contacto_enviar" data-formulario="contacto_inicio" id="contacto_inicio">Suscribirse</button>
+										<input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email" id="subscribe_email" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Correo" required >
+										
+										<button class="btn btn-primary jmy_web_contacto_enviar" name="Subscribe" type="submit" data-text="Subscribe"  id="newsletter_footer" data-formulario="newsletter_footer">Subscribe</button>
+										
+										
+										
 									</form>
 
 								</div>

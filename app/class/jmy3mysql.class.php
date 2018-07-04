@@ -120,6 +120,7 @@ class JMY3MySQL {
           while($rw=$rs->fetch_assoc()){ 
             switch($d['SALIDA']):
               case"ID_F":if(!in_array($rw['ID_F'],$ot)){$ot[]=$rw['ID_F'];}break;
+              case"ALL":if(!in_array($rw['ALL'],$ot)){$ot[]=$rw;}break;
               case "CONTADOR":
               $tmp = ($this->isJson($rw['V'])) ? json_decode($rw['V'],1):[$rw['V']];
               for($i=0;$i<count($tmp);$i++){
@@ -144,7 +145,7 @@ class JMY3MySQL {
     }
     } 
     //return ["tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"d"=>$d];    
-    return (!$d['FO']) ? ["ot"=>$ot,"otFm"=>$otFm,"otKey"=>$otK] : ["tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"otFm"=>$otFm,"d"=>$d];   
+    return (!$d['FO']) ? ["ot"=>$ot,"otFm"=>$otFm,"otKey"=>$otK] : ["DB_DB"=>DB_DB,"tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"otFm"=>$otFm,"d"=>$d];   
   }
   private function isJson($string) {
    json_decode($string);

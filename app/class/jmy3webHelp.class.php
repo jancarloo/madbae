@@ -17,6 +17,7 @@ class JMY3WEB extends JMY3MySQL{
   	parent::db([$tabla]); // Verificamos que exista la tabla, de nos er así el sistema la crea
   }
   	public function modoEditor(){ global $modoEdicion; return $modoEdicion; }
+	public function url_actual($d=[]){ if($d['return']){ return substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI']; }else{echo substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI'];} }
 	public function url_templet($d=[]){ if($d['return']){ return RUTA_ACTUAL.BASE_TEMPLET; }else{echo RUTA_ACTUAL.BASE_TEMPLET;} }
 	public function url_inicio($d=[]){ if($d['return']){ return RUTA_ACTUAL; }else{echo RUTA_ACTUAL;}  }
   
@@ -66,6 +67,52 @@ class JMY3WEB extends JMY3MySQL{
                 src="'.RUTA_ACTUAL.'app/vendor/filemanager/dialog.php?type=2&editor=mce_0&lang=eng&key='.$key.'&fldr='.urlencode($fichero).'&jmy_url='.$datos['bread'].'"></iframe>';
         return $out;
   	}
+	public function estadisticas(){
+		$g['tabla'] = "estadisticas";
+	//	$g['db'] = $this->db([$g['tabla']]);		
+		$g['url'] = $this->url_actual(['return'=>true]);		 
+		$g['ver'] = $this->ver([	
+						"TABLA"=>$g['tabla'],
+						"COL"=>["url"],
+						"V"=>[$g['url']], 
+					]);					
+		$g['key'] = ($g['ver']['otKey'][0]!='')?$g['ver']['otKey'][0]:"";		
+		
+		if($g['key']!=''){
+			$g['ver2'] = $this->ver([	"TABLA"=>$g['tabla'], 
+						"ID_F"=>$g['key'], 
+					]);
+		}		
+		$g['visitas']=($g['ver2']['ot'][$g['key']]['visitas']!='')?$g['ver2']['ot'][$g['key']]['visitas']+1:1;		
+		//$g['gu'] = 
+		parent::guardar([	"TABLA"=>$g['tabla'],
+							"ID_F"=>$g['key'],
+							"A_D"=>TRUE, 
+							"GUARDAR"=>["url"=>$g['url'],
+										"visitas"=>$g['visitas']
+										],
+							]);
+		$g['varGlobalMes'] = 'global_'.date('mY');
+		$g['varGlobal'] = 'global';
+		$g['verGlobal'] = $this->ver([	"TABLA"=>$g['tabla'], 
+										"ID_F"=>[$g['varGlobalMes'],$g['varGlobal']], 
+					]);						
+		$g['visitasMes']=($g['verGlobal']['ot'][$g['varGlobalMes']]['visitas']!='')?$g['verGlobal']['ot'][$g['varGlobalMes']]['visitas']+1:1;
+		$g['visitasTotal']=($g['verGlobal']['ot'][$g['varGlobal']]['visitas']!='')?$g['verGlobal']['ot'][$g['varGlobal']]['visitas']+1:1;
+		//$g['guGloMe'] = 
+		parent::guardar([	"TABLA"=>$g['tabla'],
+							"ID_F"=>$g['varGlobalMes'],
+							"A_D"=>TRUE, 
+							"GUARDAR"=>["visitas"=>$g['visitasMes']
+							]]);
+		//$g['guGlo'] = 
+		parent::guardar([	"TABLA"=>$g['tabla'],
+							"ID_F"=>$g['varGlobal'],
+							"A_D"=>TRUE, 
+							"GUARDAR"=>["visitas"=>$g['visitasTotal']
+						]]);		
+		return $g;
+	}
   	public function token_variable($d=''){ 
 		return  md5($_SESSION['session']['TOKEN'].$d.date('d'));						
 	}
@@ -125,20 +172,20 @@ class JMY3WEB extends JMY3MySQL{
 		global $modoEdicion;
 		$data = $d["data"];
 		if($modoEdicion){			
-			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/ckeditor.js']); // funciones jmy 
-			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/adapters/jquery.js']); // funciones jmy 
-			$this->cargar_js(['url'=>'https://code.jquery.com/ui/1.12.1/jquery-ui.js']); // funciones jmy 
-			$this->cargar_js(['url'=>BASE_APP.'js/jmy/jmyWeb.js']); // funciones jmy 
+			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/ckeditor.js']);
+			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/adapters/jquery.js']); 
+			$this->cargar_js(['url'=>'https://code.jquery.com/ui/1.12.1/jquery-ui.js']);
+			$this->cargar_js(['url'=>BASE_APP.'js/jmy/jmyWeb.js']);
 		}
 		if(file_exists(BASE_TEMPLET.TEMPLET_HEADER)){
 			$this -> cargar([ 	"pagina"=>PAGE_HEADER,
 						 		"tabla"=>"vistaweb", 
 						 		"secundario"=>PAGE_HEADER, 
 							]);
-			//$header_P = is_array($header_P['ot'])?$header_P['ot'][PAGE_HEADER]:["error"=>"no encontrado"];
 			include(BASE_TEMPLET.TEMPLET_HEADER); 
 		}	
 		if(file_exists(BASE_TEMPLET.$d['url'])){
+			$this->estadisticas();	
 			include(BASE_TEMPLET.$d['url']);
 		}else{
 			if(file_exists(BASE_TEMPLET.'error404.php'))

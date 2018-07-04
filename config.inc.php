@@ -26,9 +26,9 @@ define("IMG_RESIZING_WIDTH",900);	// Tamaño maximo de ancho a convertir, expesa
 define("IMG_RESIZING_HEIGHT",0);	// Tamaño maximo de alto a convertir, expesada en px
 
 /*Licencia JMY CONNECT*/
-define(	"JMY_SERVER","http://comsis.mx/app/update.php"); 
-define(	"JMY_KEY","8d7db37489d2aa7c76d739cac701d50a"); 
-define(	"JMY_SECRET_KEY","c15369bea0c32f7d6d66a4f886300e3e"); 
+define(	"JMY_SERVER","https://comsis.mx/api/auth/v1/jmyweb"); 
+define(	"JMY_API","3863f563b22c09b0b1f549dd21e027b5"); //API
+define(	"JMY_APIKEY","01c199f6a0682fec0d27bad37825dbe9"); //APIKEY
 /*Configuración JMY */
 define(	"DB_JMY_ADD_ID_D",true); //Agregar campos faltantes en la base de datos
 define(	"DB_JMY_ADD_TABLA",true); //Agregar Tablas faltantes en la base de datos

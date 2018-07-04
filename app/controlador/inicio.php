@@ -9,6 +9,8 @@ $out = $jmy->ver([
 $t = $jmyWeb->cargar(["pagina"=>"inicio"]);
 //$jmyWeb ->pre(['p'=>$t,'t'=>'TITULO_ARAY']);
 
+$jmyWeb->cargar_js(["url"=>"../app/js/jmy/contacto.js"]); // carga de funciones de cotnacto
+
 $jmyWeb ->cargar_vista(["url"=>"inicio.php","data"=>["blog"=>$out['otFm']]]);
 
 ?>

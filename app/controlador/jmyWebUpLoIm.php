@@ -16,6 +16,65 @@ if(is_array($_FILES)){
  * @param  $quality - enter 1-100 (100 is best quality) default is 100
  * @return boolean|resource
  */
+ 
+function sanear_string($string)
+{
+ 
+    $string = trim($string);
+ 
+    $string = str_replace(
+        array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
+        array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
+        $string
+    );
+ 
+    $string = str_replace(
+        array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
+        array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
+        $string
+    );
+ 
+    $string = str_replace(
+        array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
+        array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
+        $string
+    );
+ 
+    $string = str_replace(
+        array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
+        array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
+        $string
+    );
+ 
+    $string = str_replace(
+        array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
+        array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
+        $string
+    );
+ 
+    $string = str_replace(
+        array('ñ', 'Ñ', 'ç', 'Ç'),
+        array('n', 'N', 'c', 'C',),
+        $string
+    );
+ 
+    //Esta parte se encarga de eliminar cualquier caracter extraño
+    $string = str_replace(
+        array("\\", "-", "~",
+              "@", "|", "!",'"',
+             "·", "$", "%", "&", "/",
+             "(", ")", "?", "'", "¡",
+             "¿", "[", "^", "<code>", "]",
+             "+", "}", "{", "¨", "´",
+             ">", "< ", ";", ",", ":",
+             ".", " "),
+        '',
+        $string
+    );
+ 
+ 
+    return $string;
+}
   function smart_resize_image($file,
                               $string             = null,
                               $width              = 0, 
@@ -135,12 +194,12 @@ if(is_array($_FILES)){
       $op2[$t[0]] = $t[1];
     }
 
-   $op=["height"=>($op2['height']!='')?$op2['height']:IMG_RESIZING_HEIGHT,
-        "width"=>($op2['width']!='')?$op2['width']:IMG_RESIZING_WIDTH,
+   $op=["height"=>($op2['height']!='' && $op2['height']!='undefined')?$op2['height']:IMG_RESIZING_HEIGHT,
+        "width"=>($op2['width']!='' && $op2['width']!='undefined')?$op2['width']:IMG_RESIZING_WIDTH,
         "porcional"=>($op2['porcional']==true)?$op2['porcional']:false,
       ];
 		$sourcePath = $_FILES['userImage']['tmp_name'];
-		$targetPath = BASE_ARCHIVO.$op['width'].'x'.$op['height'].'_'.$_FILES['userImage']['name'];
+		$targetPath = BASE_ARCHIVO.$op['width'].'x'.$op['height'].'_'.sanear_string($_FILES['userImage']['name']);
     if (!file_exists(BASE_ARCHIVO)) {
         mkdir(BASE_ARCHIVO, 0777, true);
     }
