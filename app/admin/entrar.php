@@ -1,9 +1,14 @@
 <?php
+if($_GET['peticion']=='editar')
+	$jmyWeb->localE();
 require(BASE_APP.'class/jmy3webAdmin.class.php');
 $out = new JmyWebSession();
 $tkn = $out->session();
 $fn = (!$_SESSION['JMY3WEB'][DOY])? $out->fn(["fn"=>"codigo","token"=>$tkn['token'],"token"=>$tkn['token'] ]):false;
 if($_GET['peticion']=='salir'){$_SESSION['JMY3WEB'][DOY]=0;}
+$tklo=md5(date("Ymd"));
+
+$jmyWeb ->pre(['p'=>$jmyWeb->local(),'t'=>'local']);
 ?>
 <html>
 <head>
@@ -38,7 +43,12 @@ if($_GET['peticion']=='salir'){$_SESSION['JMY3WEB'][DOY]=0;}
 				<div class="card-body">
 					<p>
 						<a class="btn btn-success"  href="https://comsis.mx/admin/" target="_blank" >Abrir panel</a>
-						<button class="btn btn-info hidden"  id="refrescar" >Refrescar</button>
+						<?php if($jmyWeb->local() && !$jmyWeb->modoEditor(['return'=>true])){ echo '<a class="btn btn-info hidden" href="'.$jmyWeb->url_inicio(['return'=>true]).'entrar/editar" >Editar</a>'; } ?>
+						<?php if($jmyWeb->modoEditor(['return'=>true])) {
+							echo '<a class="btn btn-success hidden" href="'.$jmyWeb->url_inicio(['return'=>true]).'" >Editar Web</a> '; 
+							echo '<a class="btn btn-info hidden" href="'.$jmyWeb->url_inicio(['return'=>true]).'entrar/salir" >Salir</a>';
+							}
+						 ?>
 					</p>
 					<p>
 					Registra este código en tu panel para poder editar esta web

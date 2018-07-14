@@ -128,7 +128,18 @@
 						
 
 						<div id="logo" class="logo">
-								<div class="jmy_web_slider" id="logo_top" data-page="inicio" data-marco="logo_top" data-var='[{"type":"imagen","id":"logo_top_img","url":"<?php $this->url_templet(); ?>images/logo.png"}]' ><a href="<?php $this->url_inicio(); ?>"><img alt="" title="" id="logo_top_img" src="<?php $this->pnt('logo_top_img',$this->url_templet(['return'=>true]).'images/logo.png'); ?>"/></a></div>
+						
+							<div class="jmy_web_slider" data-page="header"  data-tabla="vistaweb" id="logo_topmarco" data-marco="logo_topmarco" <?php 
+										  $va[] = [ "type"=>"imagen",
+											"id"=>"logo_top_img",
+											 "width"=>"209",
+											 "height"=>"48",
+											 "url"=>$this->url_templet(["return"=>true]).'images/logo.png' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+											 
+											 <a href="<?php $this->url_inicio(); ?>"><img alt="" title="" id="logo_top_img" src="<?php $this->pnt('logo_top_img',$this->url_templet(['return'=>true]).'images/logo.png',
+										  ["secundario"=>"header"] ); ?>"/></a>
+											 
+											 </div>
 								
 							</div><!-- /#logo -->
 						

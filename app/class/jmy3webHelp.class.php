@@ -20,7 +20,8 @@ class JMY3WEB extends JMY3MySQL{
 	public function url_actual($d=[]){ if($d['return']){ return substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI']; }else{echo substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI'];} }
 	public function url_templet($d=[]){ if($d['return']){ return RUTA_ACTUAL.BASE_TEMPLET; }else{echo RUTA_ACTUAL.BASE_TEMPLET;} }
 	public function url_inicio($d=[]){ if($d['return']){ return RUTA_ACTUAL; }else{echo RUTA_ACTUAL;}  }
-  
+	public function local(){$t=explode("local".'.',$this->url_actual(['return'=>true]));return (count($t)>1)?1:0;}
+	public function localE(){$_SESSION['JMY3WEB'][DOY]=($this->local())?1:0;}
   	public function archivos($d=[]){ 
   		/* 
   		archivos([	'ruta'=>'carpeta/',
@@ -94,11 +95,18 @@ class JMY3WEB extends JMY3MySQL{
 							]);
 		$g['varGlobalMes'] = 'global_'.date('mY');
 		$g['varGlobal'] = 'global';
+		$g['contador_meses'] = 'contador_meses';
 		$g['verGlobal'] = $this->ver([	"TABLA"=>$g['tabla'], 
-										"ID_F"=>[$g['varGlobalMes'],$g['varGlobal']], 
+										"ID_F"=>[$g['varGlobalMes'],$g['varGlobal'],$g['contador_meses']], 
 					]);						
 		$g['visitasMes']=($g['verGlobal']['ot'][$g['varGlobalMes']]['visitas']!='')?$g['verGlobal']['ot'][$g['varGlobalMes']]['visitas']+1:1;
-		$g['visitasTotal']=($g['verGlobal']['ot'][$g['varGlobal']]['visitas']!='')?$g['verGlobal']['ot'][$g['varGlobal']]['visitas']+1:1;
+		$g['visitasTotal']=($g['verGlobal']['ot'][$g['varGlobal']]['visitas']!='')?$g['verGlobal']['ot'][$g['varGlobal']]['visitas']+1:1;	
+		
+		$g['verGlobal']['ot'][$g['varGlobal']]['contador_meses']=($g['verGlobal']['ot'][$g['varGlobal']]['contador_meses']!='')?json_decode($g['verGlobal']['ot'][$g['varGlobal']]['contador_meses']):false;
+		
+		if(!in_array($g['varGlobalMes'],$g['verGlobal']['ot'][$g['varGlobal']]['contador_meses']))
+			$g['verGlobal']['ot'][$g['varGlobal']]['contador_meses'][]=$g['varGlobalMes'];
+	
 		//$g['guGloMe'] = 
 		parent::guardar([	"TABLA"=>$g['tabla'],
 							"ID_F"=>$g['varGlobalMes'],
@@ -109,7 +117,8 @@ class JMY3WEB extends JMY3MySQL{
 		parent::guardar([	"TABLA"=>$g['tabla'],
 							"ID_F"=>$g['varGlobal'],
 							"A_D"=>TRUE, 
-							"GUARDAR"=>["visitas"=>$g['visitasTotal']
+							"GUARDAR"=>["visitas"=>$g['visitasTotal'],
+										"contador_meses"=>$g['verGlobal']['ot'][$g['varGlobal']]['contador_meses']
 						]]);		
 		return $g;
 	}

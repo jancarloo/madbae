@@ -83,7 +83,8 @@ class JMY3MySQL {
     $d['ID_S']=($d['ESTADO']!='')?$d['ESTADO']:$d['ID_S'];
     $d['LIKE_V']=($d['BUSQUEDA']!='')?$d['BUSQUEDA']:$d['LIKE_V'];
     $d['V']=($d['VALOR']!='')?$d['VALOR']:$d['V'];
-    $w='';$wa=0;$s=['ID_F','ID_D','V'];$pr=$d["TABLA"];$d['ID_S']=($d['ID_S']!='')? $d['ID_S']:1;
+    $w=($d['WHERE']!='')?$d['WHERE']:'';
+	$wa=0;$s=['ID_F','ID_D','V'];$pr=$d["TABLA"];$d['ID_S']=($d['ID_S']!='')? $d['ID_S']:1;
     if(count($d['COL'])>0){
       $tmp = $this->col($d['COL'],0,"NAME","Error al solcitar columnas");
       $d['ID_D']=$tmp['o']['ik'];}
@@ -93,9 +94,11 @@ class JMY3MySQL {
         $w.=" ".$s[$i]." IN ('".implode("','",$d[$s[$i]])."') ";}elseif($d[$s[$i]]!=''){
       if($wa==1){$w.=' AND ';}else{$wa=1;}
       $w.=" ".$s[$i]." = '".$d[$s[$i]]."' ";}   
-  }  
-    if($wa==1){$w .= ' AND ';}else{ $wa=1;}
-    $w.=" ID_S='".$d['ID_S']."' ";  
+	}  
+	if($d['WHERE']==''){
+		if($wa==1){$w .= ' AND ';}else{ $wa=1;}
+		$w.=" ID_S='".$d['ID_S']."' ";  
+	}
     if(is_array($d['LIKE_V'])){$wo=0;
       $op=($d['LIKE_V_OPER']!='')?trim($d['LIKE_V_OPER']):'OR';
       if($wa==1){$w .=' AND ';}else{$wa=1;}
@@ -107,7 +110,7 @@ class JMY3MySQL {
     $limit=($d["LIMIT"])?$d["LIMIT"]:'LIMIT 3000'; 
     $or=($d["ORDER"])?$d["ORDER"]:" ORDER BY ID DESC ";
     $ca=($d['SELECT']!='')?$d['SELECT']:'ID_F,ID_D,V ';
-    $ss="SELECT ".$ca." FROM ".DB_PX.$pr." WHERE ".$w." ".$or." ".$limit." ";
+    $ss=($d['SQL']!='')?$d['SQL']:"SELECT ".$ca." FROM ".DB_PX.$pr." WHERE ".$w." ".$or." ".$limit." ";
     $cu=new mysqli(DB_HO,DB_US,DB_PA,DB_DB);
     if($cu->connect_error){$error='Error de Conexión ('.$mysqli->connect_errno.') '.$mysqli->connect_error;}else{$ot=[];  
         if(!is_array($d['COL']) && !count($d['COL'])>0) {
@@ -116,8 +119,11 @@ class JMY3MySQL {
             $colKey[]=$rw['ID_D'];}}}
         $d['COL'] = (count($d['COL'])>0) ? $this->col($d['COL'],$d['A_D'],"NAME","Error al solcitar columnas")  : $this->col($colKey,$d['A_D'],"ID","Error al solcitar columnas");
         $tmpCol=$d['COL'];
-        if(!$rs=$cu->query($ss)){$error = " error ver-ss-".$cu->error;}else{
-          while($rw=$rs->fetch_assoc()){ 
+		$so[]=['ss'.$ss];
+        if(!$rs=$cu->query($ss)){$so[]=['error = '.$cu->error];$error = " error ver-ss-".$cu->error;}else{
+			$so[]=['sin error'];
+          while($rw=$rs->fetch_assoc()){
+			$so[]=$rw;
             switch($d['SALIDA']):
               case"ID_F":if(!in_array($rw['ID_F'],$ot)){$ot[]=$rw['ID_F'];}break;
               case"ALL":if(!in_array($rw['ALL'],$ot)){$ot[]=$rw;}break;
@@ -144,8 +150,7 @@ class JMY3MySQL {
         } }
     }
     } 
-    //return ["tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"d"=>$d];    
-    return (!$d['FO']) ? ["ot"=>$ot,"otFm"=>$otFm,"otKey"=>$otK] : ["DB_DB"=>DB_DB,"tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"otFm"=>$otFm,"d"=>$d];   
+    return (!$d['FO']) ? ["ot"=>$ot,"otFm"=>$otFm,"otKey"=>$otK] : ["DB_DB"=>DB_DB,"tmp"=>$tmp,"tmpCol"=>$tmpCol,"ss"=>$ss,"so"=>$so,"d"=>$d,"ot"=>$ot,"otKey"=>$otK,"otFm"=>$otFm,"d"=>$d];   
   }
   private function isJson($string) {
    json_decode($string);
@@ -161,7 +166,6 @@ class JMY3MySQL {
               $w[]=$rw;
               $ot['i'][$rw['ID']] = $rw['NAME'];
               $ot['n'][$rw['NAME']] = $rw['ID'];}$error="Sin error";
-
             $ot['ik']=(is_array($ot['i']))?array_keys($ot['i']):false;
             $ot['nk']=(is_array($ot['n']))?array_keys($ot['n']):false;
             $sa=(count($d)==count($ot['nk']))?5:$sa;
