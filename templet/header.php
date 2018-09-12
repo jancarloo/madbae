@@ -63,7 +63,7 @@
 	<!-- HEADER SCRIPTS
     
     ================================================== -->
-	<script src="js/modernizr.js">
+	<script src="<?php $this->url_templet(); ?>js/modernizr.js">
 	.different-services{ no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;}
 	</script>
 	
@@ -139,7 +139,7 @@
 											 <a href="<?php $this->url_inicio(); ?>"><img alt="" title="" id="logo_top_img" src="<?php $this->pnt('logo_top_img',$this->url_templet(['return'=>true]).'images/logo.png',
 										  ["secundario"=>"header"] ); ?>"/></a>
 											 
-											 </div>
+							</div>
 								
 							</div><!-- /#logo -->
 						

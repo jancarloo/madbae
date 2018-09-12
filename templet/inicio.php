@@ -1,11 +1,20 @@
 
 		
 <!-- MAIN BANNER -->
-<section class="cd-hero">
-	<ul class="cd-hero-slider">
-		<li class="selected jmy_web_slider" id="img_slider0" data-page="inicio" data-marco="img_slider0" data-var='[{"type":"imagen","id":"img_slider_0","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul2.jpg"}]' >
-
-			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_0', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul2.jpg'); ?>"  alt=""   >
+<section class="cd-hero XD1container" >
+	<ul class="cd-hero-slider autoplay">
+		<li class="selected jmy_web_slider" id="img_slider0" data-tabla="vistaweb" data-page="inicio" data-marco="img_slider0" 
+		
+		 <?php  $va=[];					$va[] = [ "type"=>"imagen",
+											"id"=>"img_slider_0",
+											 "width"=>"1800",
+											 "height"=>"600",
+											 "url"=>$this->url_templet(["return"=>true]).'images/main-banner/1/fondoazul2.jpg' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+											
+										<img height="600" width="1800" alt="" title="" id="img_slider_0" src="<?php $this->pnt('img_slider_0',$this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul2.jpg'); ?>">
+											 
+							
+		
 
 			<div class="cd-full-width">
 			<div class="container">
@@ -20,10 +29,17 @@
 		</li>
 
 		
+		<li class="jmy_web_slider" id="img_slider1" data-tabla="vistaweb" data-page="inicio" data-marco="img_slider1" 
+		
+		 <?php  $va=[];					$va[] = [ "type"=>"imagen",
+											"id"=>"img_slider_1",
+											 "width"=>"1800",
+											 "height"=>"600",
+											 "url"=>$this->url_templet(["return"=>true]).'images/main-banner/1/fondoazul.jpg' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+											
+										<img height="600" width="1800" alt="" title="" id="img_slider_1" src="<?php $this->pnt('img_slider_1',$this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul.jpg'); ?>">
 
-		<li class="jmy_web_slider" id="img_slider1" data-page="inicio" data-marco="img_slider1" data-var='[{"type":"imagen","id":"img_slider_1","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul.jpg"}]' >
-
-			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_1', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul.jpg'); ?>"  alt=""   >
+		
 
 			<div class="cd-full-width" >
 			<div class="container">
@@ -40,9 +56,17 @@
 			</div>
 		</li>
 
-		<li class="jmy_web_slider" id="img_slider2" data-page="inicio" data-marco="img_slider2" data-var='[{"type":"imagen","id":"img_slider_2","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul3.jpg"}]' >
+		<li class="jmy_web_slider" id="img_slider2" data-tabla="vistaweb" data-page="inicio" data-marco="img_slider2" 
+		
+		<?php  $va=[];					$va[] = [ "type"=>"imagen",
+										   "id"=>"img_slider_2",
+											"width"=>"1800",
+											"height"=>"600",
+											"url"=>$this->url_templet(["return"=>true]).'images/main-banner/1/fondoazul.jpg' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+										   
+									   <img height="600" width="1800" alt="" title="" id="img_slider_2" src="<?php $this->pnt('img_slider_2',$this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul.jpg'); ?>">
 
-			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_2', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul3.jpg'); ?>"  alt=""   >
+		
 
 			<div class="cd-full-width">
 				<div class="container text-center">
@@ -58,9 +82,17 @@
 			</div>
 		</li>
 
-		<li class="jmy_web_slider" id="img_slider3" data-page="inicio" data-marco="img_slider3" data-var='[{"type":"imagen","id":"img_slider_3","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul4.jpg"}]' >
+		<li class="jmy_web_slider" id="img_slider3" data-tabla="vistaweb" data-page="inicio" data-marco="img_slider3" 
+		
+		<?php  $va=[];					$va[] = [ "type"=>"imagen",
+										   "id"=>"img_slider_3",
+											"width"=>"1800",
+											"height"=>"600",
+											"url"=>$this->url_templet(["return"=>true]).'images/main-banner/1/fondoazul.jpg' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+										   
+									   <img height="600" width="1800" alt="" title="" id="img_slider_3" src="<?php $this->pnt('img_slider_3',$this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul.jpg'); ?>">
 
-			<img height="100%" width="100%" src="<?php $this->pnt('img_slider_3', $this->url_templet(['return'=>true]).'images/main-banner/1/fondoazul4.jpg'); ?>"  alt=""   >
+		
 			<div class="cd-full-width">
 				<div class="container text-right">
 					<h2 class="jmy_web_div" data-page="inicio" id="slider_4" data-editor="no">
@@ -129,7 +161,15 @@
 
 
 			<div class="col-md-6 animate fadeInRight">
-				<div class="video-widget jmy_web_slider XDJ1"  id="video_imagen1" data-page="inicio" data-marco="video_imagen1" data-var='[{"type":"imagen","id":"video_imagen_1","url":"<?php $this->url_templet(); ?>images/video-thumb.jpg"}]' >
+				<div class="video-widget jmy_web_slider XDJ1"  id="video_imagen1" data-tabla="vistaweb"  data-page="inicio" data-marco="video_imagen1" 
+				
+				<?php  $va=[];					$va[] = [ "type"=>"imagen",
+											"id"=>"video_imagen_1",
+											 "width"=>"540",
+											 "height"=>"368",
+											 "url"=>$this->url_templet(["return"=>true]).'images/main-banner/1/fondoazul2.jpg' ];  ?>  data-var='<?php echo json_encode($va); ?>'>
+											
+										
 					
 					<a href="<?php $this->pnt( 'video_disenadopor_href', 'http://vimeo.com/36031564'); 
 					?>" title="" class="disenado jmy_web_div fancybox-media" id="video_disenadopor" data-page="inicio" data-editor="no"><?php 
@@ -138,12 +178,11 @@
 									
 						);	
 											
-					?></a>
-					
-					
-					
+					?></a>  
+		
+		 
 						
-					<img  src="<?php $this->pnt('video_imagen_1', $this->url_templet(['return'=>true]).'images/video-thumb.jpg'); ?>" class="img-shadow" alt="" height="100%" width="100%">
+					<img height="368" width="540" alt="" title="" id="video_imagen_1" src="<?php $this->pnt('video_imagen_1',$this->url_templet(['return'=>true]).'images/video-thumb.jpg'); ?>">
 					
 
 
@@ -176,25 +215,53 @@
 
 
 
-		<div class="two-items-carousel owl-carousel">
+		
 
 
            <?php 
-                 $paginas = $this->pnt('numero_de_carrusel','3',["return"=>true]); 
+				 $paginas = $this->pnt('numero_de_carrusel','3',["return"=>true]); 
+				 
+				 $flechas =$paginas;
+							
+					echo $flechas;
+						if ($flechas >1){
+							echo ' <div class="two-items-carousel owl-carousel"> '; 
+						}else{
+							echo ' <div class="two-items-carousel" > '; 
+						}
+
                 $contador = 0;
                 for($i=0;$i<$paginas;$i++){ ?>
 
                 <!-- INICIA el Ejemplo 1 -->
-                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"carr<?php echo $i;?>_imagen","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"carr<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"carr<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+                <div class="<?php $this->pnt('slider_cat_'.$i,''); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>" data-page="inicio" data-tabla="vistaweb" data-marco="works-container" 
 
 
-					<div class="image-and-text-box animate fadeInLeft">
-						<div class="bordered-thumb " data-page="inicio">
 
-							<img id="carr<?php echo $i; ?>_imagen" src="<?php 
-							$this->pnt(	'carr'.$i.'_imagen',
-									$this->url_templet(["return"=>true]).'images/img1.jpg'
-									); ?>" alt=""></div>
+
+				<?php  $va=[];	$va[] = [ "type"=>"imagen",
+										   "id"=>"carr".$i."_imagen",
+											"width"=>"356",
+											"height"=>"480",
+											"url"=>$this->url_templet(["return"=>true])."images/img1.jpg"];
+										
+								$va[] =["type"=>"text",
+										   "id"=>"carr".$i."_titulo",
+										   "value"=>$this->pnt("carr".$i."_titulo","",["return"=>true]),
+											"placeholder"=>"TituloH3"];
+
+								$va[] =	["type"=>"text",
+										   "id"=>"carr".$i."_text",
+										   "value"=>$this->pnt("carr".$i."_text","",["return"=>true]),
+											"placeholder"=>"parrafo"];  ?>  data-var='<?php echo json_encode($va); ?>' >
+
+					<div class="image-and-text-box animate fadeInLeft">					 
+								  
+
+
+<div class="bordered-thumb " data-page="inicio">
+
+							 <img height="356" width="480" id="carr<?php echo $i; ?>_imagen" src="<?php $this->pnt('carr'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/img1.jpg'); ?>"></div>
 						<h3 class="" data-page="inicio" id="carr<?php echo $i; ?>_titulo"><?php 
 						$this->pnt('carr'.$i.'_titulo','Why Our Consulting'); ?></h3>
 
@@ -206,7 +273,24 @@
 				<!-- FINALIZA el Ejemplo 1 -->
 
   <!-- INICIA el Ejemplo 1 -->
-                <div class="<?php $this->pnt('slider_cat_'.$i,'_b'); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>_b" data-page="inicio" data-marco="works-container" data-var='[{"type":"imagen","id":"carr<?php echo $i;?>_imagen_b","url":"<?php $this->url_templet();?>images/img1.jpg"},{"type":"text","id":"carr<?php echo $i;?>_titulo_b","placeholder":"TituloH3"},{"type":"text","id":"carr<?php echo $i;?>_text_b","placeholder":"parrafo"}]'>
+                <div class="<?php $this->pnt('slider_cat_'.$i,'_b'); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>_b" data-page="inicio" data-tabla="vistaweb" data-marco="works-container" 
+				
+				
+				<?php  $var=[];	$var[] = [ "type"=>"imagen",
+										   "id"=>"carr".$i."_imagen_b",
+											"width"=>"356",
+											"height"=>"480",
+											"url"=>$this->url_templet(["return"=>true])."images/img1.jpg"];
+										
+								$var[] =["type"=>"text",
+										   "id"=>"carr".$i."_titulo_b",
+										   "value"=>$this->pnt("carr".$i."_titulo_b","",["return"=>true]),
+											"placeholder"=>"TituloH3"];
+
+								$var[] =	["type"=>"text",
+										   "id"=>"carr".$i."_text_b",
+										   "value"=>$this->pnt("carr".$i."_text_b","",["return"=>true]),
+											"placeholder"=>"parrafo"];  ?>  data-var='<?php echo json_encode($var); ?>'>
 
 
 					<div class="image-and-text-box animate fadeInLeft">
@@ -219,7 +303,7 @@
 						?></p>
 						<div class="bordered-thumb " data-page="inicio">
 
-							<img id="carr<?php echo $i; ?>_imagen_b" src="<?php 
+							<img height="356" width="480" id="carr<?php echo $i; ?>_imagen_b" src="<?php 
 							$this->pnt(	'carr'.$i.'_imagen_b',
 									$this->url_templet(["return"=>true]).'images/img1.jpg'
 									); ?>" alt=""></div>
@@ -241,7 +325,8 @@
 				<div class="bordered-thumb " data-page="inicio" id="carr<?php echo $i; ?>_imagen2"><?php 
 					$this->pnt(	'carr'.$i.'_imagen2','<img src="'. $this->url_templet(["return"=>true]).'images/img1.jpg" alt="">'); 
 				?></div>
-			</div> */ } ?>
+			</div> */ }
+	 ?>
 
 
 
@@ -253,7 +338,14 @@
 
 <!-- FUNFACTS -->
 <div class="container">
-	<div class="funfacts text-center jmy_web_slider" id="helping_back1" data-page="inicio" data-marco="helping_back1" data-var='[{"type":"imagen","id":"helping_back","url":"<?php $this->url_templet(); ?>images/funfact-bg.jpg"}]' style="background: url(<?php $this->pnt('helping_back', $this->url_templet(['return'=>true]).'images/funfact-bg.jpg'); ?>); background-repeat: no-repeat; background-size: cover; height:397px; position:relative; margin-bottom:-117px; z-index:100;">
+	<div class="funfacts text-center jmy_web_slider" id="helping_back1" data-page="inicio" data-marco="helping_back1" 	
+	style="background: url(<?php $this->pnt('helping_back', $this->url_templet(['return'=>true]).'images/funfact-bg.jpg'); ?>); background-repeat: no-repeat; background-size: cover; height:397px; position:relative; margin-bottom:-117px; z-index:100;"
+
+	<?php  $var=[];				$var[] = [ "type"=>"imagen",
+										   "id"=>"helping_back",
+											"width"=>"1170",
+											"height"=>"398",
+											"url"=>$this->url_templet(["return"=>true])."images/img1.jpg"]; ?>  data-var='<?php echo json_encode($var); ?>'>
 
 		<div class="advisor-overlay"></div>
 		<div class="funfacts-inner">
@@ -315,7 +407,15 @@
 
 
 <!-- DIFFERENT SERVICES -->
-<section class=" text-center parallax jmy_web_slider different-service" id="back_love" data-page="inicio" data-marco="back_love" data-var='[{"type":"imagen","id":"img_back_love","url":"<?php $this->url_templet(); ?>images/parallax/1.jpg"}]' style="background-image: url(<?php $this->pnt('img_back_love', $this->url_templet(['return'=>true]).'images/parallax/1.jpg'); ?>); no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;">
+<section class=" text-center parallax jmy_web_slider different-service" id="back_love" data-page="inicio" data-marco="back_love" style="background-image: url(<?php $this->pnt('img_back_love', $this->url_templet(['return'=>true]).'images/parallax/1.jpg'); ?>); no-repeat center top; background-size:cover; height:642px; padding-top:260px; position:relative;"
+
+
+<?php  $var=[];					$var[] = [ "type"=>"imagen",
+										   "id"=>"img_back_love",
+											"width"=>"1920",
+											"height"=>"1250",
+											"url"=>$this->url_templet(["return"=>true])."images/img1.jpg"]; ?>  data-var='<?php echo json_encode($var); ?>'
+>
 
 <?php /*
 	<li class="jmy_web_slider" id="img_slider3" data-page="inicio" data-marco="img_slider3" data-var='[{"type":"imagen","id":"img_slider_3","url":"<?php $this->url_templet(); ?>images/main-banner/1/fondoazul4.jpg"}]' >
@@ -402,16 +502,35 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 animate fadeInLeft">
+			<div class="col-md-6 animate fadeInLeft" >
 				<ul class="image-list-classic ">
 					<li>
-					  <div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont" data-page="inicio" data-marco="bro_imagen_cont" data-var='[{"type":"imagen","id":"bro_imagen","url":"<?php $this->url_templet(); ?>images/behind.jpg"}]' >
+					  <div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont" data-page="inicio" data-marco="bro_imagen_cont"  
+					  
+					  
+					  <?php  $var=[];
+					  			$var[] = [ "type"=>"imagen",
+										   "id"=>"bro_imagen",
+											"width"=>"360",
+											"height"=>"386",
+											"url"=>$this->url_templet(["return"=>true])."images/behind.jpg"];
+											
+											?>  data-var='<?php echo json_encode($var); ?>'>
 
 					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen" src="<?php $this->pnt('bro_imagen',$this->url_templet(['return'=>true]).'images/behind.jpg'); ?>"/>
 					  </div>
 					</li>
 					<li>
-						<div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2" data-button="down" data-var='[{"type":"imagen","id":"bro_imagen2","url":"<?php $this->url_templet(); ?>images/behind2.jpg"}]' >
+						<div class="col-md-12 text-center jmy_web_slider" id="bro_imagen_cont2" data-page="inicio" data-marco="bro_imagen_cont2"  data-button="down"
+						<?php  $var=[];
+
+								$var[] = [ "type"=>"imagen",
+										   "id"=>"bro_imagen2",
+											"width"=>"402",
+											"height"=>"280",
+											"url"=>$this->url_templet(["return"=>true])."images/behind2.jpg"];
+											
+											?>  data-var='<?php echo json_encode($var); ?>'>
 
 					  	<img data-no-retina height="60" alt="" title="" id="bro_imagen2" src="<?php $this->pnt('bro_imagen2',$this->url_templet(['return'=>true]).'images/behind2.jpg'); ?>"/>
 					  </div>
@@ -504,10 +623,18 @@
 			        $this->pnt('numero_carrusel_nuestros','3'); 
 			        ?>" data-titulo="Inica el número de páginas a mostrar"></div>
 		
-		<div class="single-item-carousel owl-carousel classic-arrows">
+		
 			
 			<?php 
-            	     $paginas = $this->pnt('numero_carrusel_nuestros','3',["return"=>true]); 
+					 $paginas = $this->pnt('numero_carrusel_nuestros','3',["return"=>true]); 
+					 $flechas =$paginas;
+							
+						echo $flechas;
+						if ($flechas >1){
+							echo ' <div class="single-item-carousel owl-carousel classic-arrows"> '; 
+						}else{
+							echo ' <div> '; 
+						}
               		 $contador = 0;
                 		for($i=0;$i<$paginas;$i++){ ?>
 
@@ -517,7 +644,28 @@
 				<div class="col-md-1" >
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</div> 
-				<div class="col-md-5 animate fadeInLeft <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[{"type":"imagen","id":"nuestros_asesores_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/meet-our-advisors-img1.jpg"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_titulo","placeholder":"TituloH3"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text","placeholder":"parrafo"},{"type":"text","id":"nuestros_asesores<?php echo $i;?>_text2","placeholder":"parrafo2"}]'>
+				<div class="col-md-5 animate fadeInLeft <?php $this->pnt('slider_caasesor_'.$i,''); ?> jmy_web_slider" id="nuestros_asesores_img<?php echo $i; ?>" data-tabla="vistaweb" data-page="inicio" data-marco="works-container"  
+				
+				<?php  $var=[];	$var[] = [ "type"=>"imagen",
+										   "id"=>"nuestros_asesores_i".$i."_imagen",
+											"width"=>"460",
+											"height"=>"436",
+											"url"=>$this->url_templet(["return"=>true])."images/meet-our-advisors-img1.jpg"];
+										
+								$var[] =["type"=>"text",
+										   "id"=>"nuestros_asesores".$i."_titulo",
+										   "value"=>$this->pnt("nuestros_asesores".$i."_titulo","",["return"=>true]),
+											"placeholder"=>"TituloH3"];
+
+								$var[] =	["type"=>"text",
+										   "id"=>"nuestros_asesores".$i."_text",
+										   "value"=>$this->pnt("nuestros_asesores".$i."_text","",["return"=>true]),
+											"placeholder"=>"parrafo"];
+
+								$var[] =	["type"=>"text",
+										   "id"=>"nuestros_asesores".$i."_text2",
+										   "value"=>$this->pnt("nuestros_asesores".$i."_text2","",["return"=>true]),
+											"placeholder"=>"parrafo2"];  ?>  data-var='<?php echo json_encode($var); ?>'>
 
 
 					<img id="nuestros_asesores_i<?php echo $i; ?>_imagen" src="<?php $this->pnt('nuestros_asesores_i'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/meet-our-advisors-img1.jpg'); ?>"/></div>
@@ -563,26 +711,62 @@
 
 		<div class="row">
 			<div class=" jmy_web_contador" data-page="inicio" id="numero_carrusel_happy" data-value="<?php
-        $this->pnt('numero_carrusel_happy','3'); 
-        ?>" data-titulo="Inica el número de páginas a mostrar"></div>			
-				<div class="single-item-carousel owl-carousel classic-arrows">
-					
+		 		$this->pnt('numero_carrusel_happy','3'); 
+       			 ?>" data-titulo="Inica el número de páginas a mostrar"></div>			
+				
+				
 					<?php 
-		            	     $paginas = $this->pnt('numero_carrusel_happy','3',["return"=>true]); 
-		              		 $contador = 0;
+							 $paginas = $this->pnt('numero_carrusel_happy','3',["return"=>true]);
+							 $flechas =$paginas;
+							
+						echo $flechas;
+						if ($flechas >1){
+							echo ' <div class="single-item-carousel owl-carousel classic-arrows"> '; 
+						}else{
+							echo ' <div> '; 
+						}
+				
+							   $contador = 0;
+
+							   
+
 		                		for($i=0;$i<$paginas;$i++){ 
 		             ?>
-
+					 
+					
 
 					<div class="row">
 
 						
-						<div class="col-md-1">	</div>
+						<div class="col-md-1"></div>
 						<div class="col-md-5">
-							<div class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>" data-page="inicio" data-marco="works-container"  data-var='[
-								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
-								{"type":"text","id":"happy<?php echo $i;?>_titulo","placeholder":"Nombre"},
-								{"type":"text","id":"happy<?php echo $i;?>_text","placeholder":"parrafo"}]'>
+							
+							<div class="testimonial animate fadeInUp <?php $this->pnt('slider_happy_'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>" data-page="inicio" data-tabla="vistaweb" data-marco="works-container"  
+							
+								
+								
+		<?php  $vari=[];	$vari[] = [ "type"=>"imagen",
+										   "id"=>"happy_i".$i."_imagen",
+											"width"=>"63",
+											"height"=>"63",
+											"url"=>$this->url_templet(["return"=>true])."images/meet-our-advisors-img1.jpg"];
+										
+								$vari[] =["type"=>"text",
+										   "id"=>"happy".$i."_titulo",
+										   "value"=>$this->pnt("happy".$i."_titulo","",["return"=>true]),
+											"placeholder"=>"Nombre"];
+
+								$vari[] =	["type"=>"text",
+										   "id"=>"happy".$i."_text",
+										   "value"=>$this->pnt("happy".$i."_text","",["return"=>true]),
+											"placeholder"=>"Comentario"];
+
+								$vari[] =	["type"=>"text",
+										   "id"=>"happy".$i."_cargo",
+										   "value"=>$this->pnt("happy".$i."_cargo","",["return"=>true]),
+											"placeholder"=>"_cargo"];
+
+								  ?>  data-var='<?php echo json_encode($vari); ?>'>
 
 								<div class="testimonial-content">
 									<p class="" data-page="inicio" id="happy<?php echo $i; ?>_text"><?php 
@@ -591,20 +775,31 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="testimonials-author">
-											<img class="img-circle" id="happy<?php echo $i; ?>_imagen" src="<?php $this->pnt('happy'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
+											<img class="img-circle" id="happy_i<?php echo $i; ?>_imagen" src="<?php $this->pnt('happy_i'.$i.'_imagen',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
 
-											<p class="" data-page="inicio" id="happy<?php echo $i; ?>_titulo"><?php 
-								$this->pnt('happy'.$i.'_titulo','Boris Hunt'); ?><span>(Sales Agent)</span></p>
+											<p class="" data-page="inicio" id="happy<?php echo $i; ?>_titulo"><?php $this->pnt('happy'.$i.'_titulo','Boris Hunt'); ?></p>
+
+											<h6 data-page="inicio" id="happy<?php echo $i; ?>_cargo"><?php  $this->pnt('happy'.$i.'_cargo','<span>sales</span>'); ?></h6>
 										</div>
 									</div>
 									<div class="col-md-6">
+										<div class=" jmy_web_contador" data-page="inicio" id="stars_five<?php echo $i; ?>" data-value="<?php
+												$this->pnt('stars_five<?php echo $i; ?>','2'); 
+												?>" data-titulo="Inica el número de páginas a mostrar"></div>
 										<div class="text-right">
 											<ul class="rating">
+
+														
+														<?php 
+																$numberstar = $this->pnt('stars_five'.$i,'2',["return"=>true]); 
+																$contador = 0;
+																	for($b=0;$b<$numberstar;$b++){ 
+														?>
+
+											
+
 												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
+												<?php } ?>
 											</ul>
 										</div>
 									</div>
@@ -612,10 +807,34 @@
 							</div>
 						</div>
 						<div class="col-md-5">
-							<div data-delay="100" class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_b'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>_b" data-page="inicio" data-marco="works-container"  data-var='[
-								{"type":"imagen","id":"happy_i<?php echo $i; ?>_imagen_b","url":"<?php $this->url_templet(); ?>images/review-author-img.png"},
-								{"type":"text","id":"happy<?php echo $i;?>_titulo_b","placeholder":"Nombre"},
-								{"type":"text","id":"happy<?php echo $i;?>_text_b","placeholder":"parrafo"}]'>
+							<div data-delay="100" class="testimonial animate fadeInUp<?php $this->pnt('slider_happy_b'.$i,''); ?> jmy_web_slider" id="happy_img<?php echo $i; ?>_b" data-page="inicio" data-marco="works-container"  
+
+							<div class="<?php $this->pnt('slider_cat_'.$i,'_bXD'); ?> jmy_web_slider" id="grupo_slider_<?php echo $i;?>_bXD" data-page="inicio" data-tabla="vistaweb" data-marco="works-container" 
+							
+							
+								<?php  $var=[];	$var[] = [ "type"=>"imagen",
+										   "id"=>"happy_i".$i."_imagen_b",
+											"width"=>"63",
+											"height"=>"63",
+											"url"=>$this->url_templet(["return"=>true])."images/meet-our-advisors-img1.jpg"];
+										
+								$var[] =["type"=>"text",
+										   "id"=>"happy".$i."_titulo_b",
+										   "value"=>$this->pnt("happy".$i."_titulo_b","",["return"=>true]),
+											"placeholder"=>"Nombre"];
+
+								$var[] =	["type"=>"text",
+										   "id"=>"happy".$i."_text_b",
+										   "value"=>$this->pnt("happy".$i."_text_b","",["return"=>true]),
+											"placeholder"=>"Comentario"];
+
+								$var[] =	["type"=>"text",
+										   "id"=>"happy".$i."_cargo_b",
+										   "value"=>$this->pnt("happy".$i."_cargo_b","",["return"=>true]),
+											"placeholder"=>"cargo"];
+
+								  ?>  data-var='<?php echo json_encode($var); ?>'>
+								
 
 								<div class="testimonial-content">
 									<p class="" data-page="inicio" id="happy<?php echo $i; ?>_text_b"><?php 
@@ -624,20 +843,32 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="testimonials-author">
-											<img class="img-circle" id="happy<?php echo $i; ?>_imagen_b" src="<?php $this->pnt('happy'.$i.'_imagen_b',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
+											<img class="img-circle" id="happy_i<?php echo $i; ?>_imagen_b" src="<?php $this->pnt('happy_i'.$i.'_imagen_b',$this->url_templet(['return'=>true]).'images/review-author-img.png'); ?>"/>
 
 											<p class="" data-page="inicio" id="happy<?php echo $i; ?>_titulo_b"><?php 
-								$this->pnt('happy'.$i.'_titulo_b','Boris Hunt'); ?><span>(Sales Agent)</span></p>
+								$this->pnt('happy'.$i.'_titulo_b','Boris Hunt'); ?></p>
+
+											<h6 data-page="inicio" id="happy<?php echo $i; ?>_cargo_b"><?php  $this->pnt('happy'.$i.'_cargo_b','<span>sales</span>'); ?></h6>
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="text-right">
-											<ul class="rating">
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
+										<div class=" jmy_web_contador" data-page="inicio" id="stars_five_b<?php echo $i; ?>" data-value="<?php
+													$this->pnt('stars_five_b<?php echo $i; ?>','2'); 
+													?>" data-titulo="Inica el número de páginas a mostrar"></div>
+											<div class="text-right">
+												<ul class="rating">
+
+															
+															<?php 
+																	$numberstarb = $this->pnt('stars_five_b'.$i,'2',["return"=>true]); 
+																	$contador = 0;
+																		for($c=0;$c<$numberstarb;$c++){ 
+															?>
+
+												
+
+													<li><i class="fa fa-star"></i></li>
+													<?php } ?>
 											</ul>
 										</div>
 									</div>
@@ -685,19 +916,19 @@
 			</div>
 			<div class="request-a-callback-form">
 			<form>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Your Name" required>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email Address" required>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Phone Number" >
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Nombre" required>
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email " required>
+					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Teléfono" >
 					<div class="styled-select">
 						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
-							<option>I would like to discuss:</option>
-							<option>Personal Finance</option>
-							<option>Stock trading</option>
-							<option>Retirement</option>
-							<option>Other</option>
+							<option>Me interesa</option>
+							<option>Finanza personal</option>
+							<option>Comercio de acciones</option>
+							<option>Jubilación</option>
+							<option>Otros</option>
 						</select>
 					</div>
-					<button class="btn btn-primary jmy_web_contacto_enviar" id="contacto_inicio" data-formulario="contacto_inicio">Submit</button>
+					<button class="btn btn-primary jmy_web_contacto_enviar" id="contacto_inicio" data-formulario="contacto_inicio" data-text="Enviar" >Enviar</button>
 				</form>
 			</div>
 		</div>

@@ -72,11 +72,11 @@
 									<p class="subscribe_error" id="subscribe_error" style="display:none;"></p>
 									<form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
 									
-										<input type="text"data-delay="300" placeholder="Your Name" name="subscribe_name" id="subscribe_name" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Nombre" required >
+										<input type="text"data-delay="300" placeholder="Tú nombre" name="subscribe_name" id="subscribe_name" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Nombre" required >
 										
-										<input type="text" data-delay="300" placeholder="Email Address" name="subscribe_email" id="subscribe_email" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Correo" required >
+										<input type="text" data-delay="300" placeholder="Email" name="subscribe_email" id="subscribe_email" class="input jmy_web_contacto" data-formulario="newsletter_footer" data-campo="Correo" required >
 										
-										<button class="btn btn-primary jmy_web_contacto_enviar" name="Subscribe" type="submit" data-text="Subscribe"  id="newsletter_footer" data-formulario="newsletter_footer">Subscribe</button>
+										<button class="btn btn-primary jmy_web_contacto_enviar" name="Subscribe" type="submit" data-text="Subscribirme"  id="newsletter_footer" data-formulario="newsletter_footer">Subscribirme</button>
 										
 										
 										
@@ -84,10 +84,48 @@
 
 								</div>
 								<ul class="social">
-									<li class="animate bounceIn"><a href="<?php $this->url_inicio(); ?>#." class="facebook"><i class="icon-facebook-1"></i></a></li>
-									<li class="animate bounceIn" data-delay="100"><a href="<?php $this->url_inicio(); ?>#." class="twitter"><i class="icon-twitter-1"></i></a></li>
-									<li class="animate bounceIn" data-delay="200"><a href="<?php $this->url_inicio(); ?>#." class="google-plus"><i class="icon-google"></i></a></li>
-									<li class="animate bounceIn" data-delay="300"><a href="<?php $this->url_inicio(); ?>#." class="linkedin"><i class="icon-linkedin3"></i></a></li>
+									<li class="animate bounceIn">
+										<a href="<?php 
+										$this->pnt( 'face_footer_href', 'https://www.facebook.com/VentaOnlineDF/', ["secundario"=>"footer"] ); 
+										?>" title="facebook" target="blank" class="disenado jmy_web_div facebook" id="face_footer" data-page="footer" data-editor="no"><?php 
+										$this->pnt( 'face_footer',
+													'<i class="fa fa-facebook"></i>',
+													["secundario"=>"footer"]); 
+										?></a>
+									</li>
+
+									<li class="animate bounceIn" data-delay="100">
+										<a href="<?php 
+										$this->pnt( 'face_twitter_href', 'https://www.facebook.com/VentaOnlineDF/', ["secundario"=>"footer"] ); 
+										?>" title="Twitter" target="blank" class="jmy_web_div twitter" id="face_twitter" data-page="footer" data-editor="no"><?php 
+										$this->pnt( 'face_twitter',
+													'<i class="icon-twitter-1"></i>',
+													["secundario"=>"footer"]); 
+										?></a>
+									</li>
+
+									<li class="animate bounceIn" data-delay="200">
+										<a href="<?php 
+										$this->pnt( 'face_google_href', 'https://www.facebook.com/VentaOnlineDF/', ["secundario"=>"footer"] ); 
+										?>" title="Google" target="blank" class="jmy_web_div google-plus" id="face_google" data-page="footer" data-editor="no"><?php 
+										$this->pnt( 'face_google',
+													'<i class="icon-google"></i>',
+													["secundario"=>"footer"]); 
+										?></a>
+									</li>
+
+									
+									<li class="animate bounceIn" data-delay="300">
+										<a href="<?php 
+										$this->pnt( 'face_linkedin_href', 'https://www.facebook.com/VentaOnlineDF/', ["secundario"=>"footer"] ); 
+										?>" title="Linkedin" target="blank" class="jmy_web_div linkedin" id="face_linkedin" data-page="footer" data-editor="no"><?php 
+										$this->pnt( 'face_linkedin',
+													'<i class="icon-linkedin3"></i>',
+													["secundario"=>"footer"]); 
+										?></a>
+									</li>
+
+									
 								</ul>
 							</div>
 						</div>
