@@ -186,7 +186,7 @@
 									</ul>
 								</li>
 								<li><a href="<?php $this->url_inicio(); ?>shop.html">Shop</a></li>  */?>
-								<li class="dropdown"><a href="<?php $this->url_inicio(); ?>#.">Contactanos <i class="fa fa-caret-down"></i></a>
+								<li class="dropdown"><a href="<?php $this->url_inicio(); ?>contacto">Contactanos <i class="fa fa-caret-down"></i></a>
 									<ul class="dropdown-menu">
 										<li><a href="<?php $this->url_inicio(); ?>contact-us.html">Contactanos uno</a></li>
 										<li><a href="<?php $this->url_inicio(); ?>contact-us2.html">Contactanos dos</a></li>

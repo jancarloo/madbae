@@ -916,19 +916,19 @@
 			</div>
 			<div class="request-a-callback-form">
 			<form>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Nombre" required>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email " required>
-					<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Teléfono" >
-					<div class="styled-select">
-						<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
-							<option>Me interesa</option>
-							<option>Finanza personal</option>
-							<option>Comercio de acciones</option>
-							<option>Jubilación</option>
-							<option>Otros</option>
-						</select>
-					</div>
-					<button class="btn btn-primary jmy_web_contacto_enviar" id="contacto_inicio" data-formulario="contacto_inicio" data-text="Enviar" >Enviar</button>
+				<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Nombre" placeholder="Nombre" required>
+				<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Email" placeholder="Email " required>
+				<input type="text" class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Teléfono" placeholder="Teléfono" >
+				<div class="styled-select">
+					<select class="jmy_web_contacto" data-formulario="contacto_inicio" data-campo="Opciones" >
+						<option>Me interesa</option>
+						<option>Finanza personal</option>
+						<option>Comercio de acciones</option>
+						<option>Jubilación</option>
+						<option>Otros</option>
+					</select>
+				</div>
+				<button class="btn btn-primary jmy_web_contacto_enviar" id="contacto_inicio" data-formulario="contacto_inicio" data-text="Enviar" >Enviar</button>
 				</form>
 			</div>
 		</div>
