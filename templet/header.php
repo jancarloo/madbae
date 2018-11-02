@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
   <head>
 
-    <base href="<?php $this->url_templet(); ?>" />
+    <base href="<?php $this->url_inicio(); ?>" />
 
 	<!-- Basic Page Needs
      ================================================== -->
