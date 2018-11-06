@@ -154,7 +154,7 @@
 				<div class="height-10"></div>
 				<p class="jmy_web_div " data-page="inicio" id="2welcom_adv" data-editor="no"><?php $this->pnt('2welcom_adv','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum nec risus et suscipit Curabitur metus ipsum.'); ?></p>
 				<div class="height-20"></div>
-				<a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-bordered-dark" data-text="leer mas">leer mas</a>
+				<!-- <a href="<?php $this->url_inicio(); ?>about-us.html" class="btn btn-bordered-dark" data-text="leer mas">leer mas</a> -->
 				<div class="height-40"></div>
 			</div>
 
@@ -223,7 +223,7 @@
 				 
 				 $flechas =$paginas;
 							
-					echo $flechas;
+					//echo $flechas;
 						if ($flechas >1){
 							echo ' <div class="two-items-carousel owl-carousel"> '; 
 						}else{
@@ -599,7 +599,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="text-right">
-					<a href="<?php $this->url_inicio(); ?>" class="btn btn-primary get-in-touch animate fadeInRight" data-text="Contactanos "><i class="icon-telephone114"></i>Contactanos</a>
+					<!-- <a href="<?php $this->url_inicio(); ?>" class="btn btn-primary get-in-touch animate fadeInRight" data-text="Contactanos "><i class="icon-telephone114"></i>Contactanos</a> -->
 				</div>
 			</div>
 		</div>
